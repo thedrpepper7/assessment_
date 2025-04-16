@@ -1,3 +1,6 @@
-.intro::after {
-    content: "\ea10";
-  }
+$g-border: 5px solid green;
+
+
+.london {
+  border: $g-border;
+}
