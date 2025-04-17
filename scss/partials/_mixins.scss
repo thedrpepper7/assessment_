@@ -1,0 +1,27 @@
+@import '../partials/variables';
+
+
+@mixin nopadlist {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+@mixin whitelink {
+    a:link { 
+        text-decoration: none;
+        color:white;
+      } 
+      a:visited { 
+        
+        color:white; 
+      } 
+      a:hover { 
+        text-decoration: underline;
+        color:white; 
+      } 
+      a:active { 
+        
+        color:white; 
+      }
+}      

@@ -1,7 +1,7 @@
-@import 'partials/symbols';
-
-
-$g-border: 5px solid green;
+@import 'partials/layout';
+@import 'partials/footer';
+@import 'partials/mixins';
+@import 'partials/variables';
 
 
 
@@ -18,11 +18,12 @@ $g-border: 5px solid green;
 }
 
 #search {
-  display: block;
+  display: inline-flex;
   background-color: grey;
   width: 100%;
-  height: 40px;
+  height: 50px;
   box-shadow: inset 0 0 2px 2px purple;
   padding: 5px;
-  margin: auto;
+  
 }
+
