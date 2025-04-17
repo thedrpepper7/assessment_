@@ -5,6 +5,7 @@
 
 .footer-menu {
     flex: 20%;
+    padding: 20px;
 }
 
 footer {
@@ -12,6 +13,7 @@ footer {
     color: #fff;
     padding: 20px 0 0;
     margin-top: auto;
+    
     
 
     .footer-row{
@@ -59,4 +61,11 @@ footer {
     padding-right: 60px;
     padding-top: 40px;
     gap:20px;
+}
+
+#copyright {
+    align-items: center;
+    position: flex;
+    margin-left: 20vh;
+    width:100%;
 }
