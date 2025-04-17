@@ -1,1 +1,1 @@
-.footr{display:flex;bottom:0;margin:0 auto;color:red}.top{display:flex;gap:20px}.top img{display:block;max-width:100%}
+.top{display:flex;gap:20px;flex-wrap:nowrap}.top img{display:block;max-width:100%}#search{display:block;background-color:grey;width:100%;height:40px;box-shadow:inset 0 0 2px 2px purple;padding:5px;margin:auto}
