@@ -1,3 +1,21 @@
+@import 'mixins';
+
+.image1, .image2, .image3, .image4, .image5, .image6 {
+    position: absolute;
+    opacity: 0;
+    top: auto;
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box;
+    bottom: 140%;
+    margin: 0 auto 50px;
+}
+
+.clientsimages {
+    position: relative;
+    display: inline-block;
+}
+
 .clients {
     display: grid;
     grid-auto-flow: row;
@@ -17,3 +35,27 @@
 .clients img:hover {
     filter:none;
 }
+
+.clientsimages:hover .image1,
+.clientsimages:hover .image2,
+.clientsimages:hover .image3,
+.clientsimages:hover .image4,
+.clientsimages:hover .image5,
+.clientsimages:hover .image6 {
+  opacity: 1;
+  @include clients
+}
+
+.clientlink {
+    @include clientlink;
+    margin: auto;
+}
+
+#girlguidinganglia {
+    background-color: blue;
+}
+
+#sweetzy {
+    background-color: green;
+}
+
