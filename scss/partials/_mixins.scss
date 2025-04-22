@@ -1,6 +1,9 @@
 @import '../partials/variables';
 
 
+
+/* footer */
+
 @mixin nopadlist {
     list-style-type: none;
     padding: 0;
@@ -26,6 +29,9 @@
       }
 }
 
+
+/* clients */
+
 @mixin clients {
     border: 3px solid $backgroundgrey;
     background-color: $backgroundgrey;
@@ -39,4 +45,24 @@
     padding: 10px;
     text-decoration: none;
     color: white;
+}
+
+/* news */
+
+@mixin latestnews($headingcolor){
+  padding: 10px;
+  background-color: #feffff;
+  height: 400px;
+  h3 {
+    color:$headingcolor;
+  }
+
+  a {
+    text-decoration: none;
+    background-color: $headingcolor;
+    border-radius: 2px;
+    color:white;
+    padding:15px;
+  }
+
 }

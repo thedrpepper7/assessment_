@@ -9,8 +9,6 @@
     box-sizing: border-box;
     bottom: 140%;
     margin: 0 auto 50px;
-    
-    
 }
 
 .clientsimages {
@@ -22,7 +20,7 @@
     display: grid;
     grid-auto-flow: row;
     max-height: 100px;
-    padding:10px;
+    padding:20px;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: auto auto auto auto auto auto;
     grid-gap:5px;
