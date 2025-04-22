@@ -9,6 +9,8 @@
     box-sizing: border-box;
     bottom: 140%;
     margin: 0 auto 50px;
+    
+    
 }
 
 .clientsimages {
@@ -44,6 +46,7 @@
 .clientsimages:hover .image6 {
   opacity: 1;
   @include clients
+
 }
 
 .clientlink {
