@@ -1,0 +1,30 @@
+.servicesL {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    justify-content: center;
+    gap:20px;
+}
+
+.servicesS {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap:20px;
+}
+
+
+.bespoke, .ITsup, .digitalmarketing, .telecoms, .webdesign, .cybersecurity, .developertraining {
+    padding: 5px;
+    background-color: whitesmoke;
+}
+
+.ourservices {
+    margin-left:20%;
+    margin-right: 20%;
+    text-align: center;
+}
+
+.servicesL, .servicesS {
+    margin:20px;
+}
