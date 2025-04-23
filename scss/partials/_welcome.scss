@@ -26,3 +26,13 @@
     padding-right: 10px;
     width: calc(50% -20px);
 }
+
+@media (min-width:992px) {
+    .welcome {
+        flex-wrap: nowrap;
+    }
+
+    .whtclnts, .wlcmnet {
+        width: 30%;
+    }
+}
