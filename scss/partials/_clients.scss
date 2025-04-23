@@ -4,7 +4,7 @@
     position: absolute;
     opacity: 0;
     top: auto;
-    padding: 10px;
+    padding: 20px;
     text-align: center;
     box-sizing: border-box;
     bottom: 140%;
@@ -20,12 +20,10 @@
     display: grid;
     grid-auto-flow: row;
     max-height: 100px;
-    padding:20px;
+    padding: 20px 10px 30px 10px;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: auto auto auto auto auto auto;
     grid-gap:5px;
-    padding: 7px;
-    
 }
 
 .clients img {

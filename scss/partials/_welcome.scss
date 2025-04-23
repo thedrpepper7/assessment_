@@ -1,0 +1,28 @@
+.welcome {
+    display: flex;
+    margin:auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    background-color: $backgroundgrey;
+    max-width: 100%;
+    color:white;
+    padding:20px;
+}
+
+.bckgrnclr {
+    background-color: $backgroundgrey;
+
+}
+
+.stars::after {
+    content: '\2605';
+    font-size: 1.2em;
+    font-family: 'Poppins', sans-serif;
+  }
+
+.wlcmnet, .whtclnts {
+    padding-left:10px;
+    padding-right: 10px;
+    width: calc(50% -20px);
+}
