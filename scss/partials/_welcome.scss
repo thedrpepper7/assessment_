@@ -7,7 +7,8 @@
     background-color: $backgroundgrey;
     max-width: 100%;
     color:white;
-    padding:20px;
+    padding:30px 20px 80px 20px;
+    position: relative;
 }
 
 .bckgrnclr {
@@ -35,4 +36,42 @@
     .whtclnts, .wlcmnet {
         width: 30%;
     }
+}
+
+.source {
+    color: #a3a8ac;
+}
+
+.slink {
+    text-decoration: none;
+    color:white;
+}
+
+.wlink {
+    text-decoration: none;
+    color:white;
+    background-color: #272936;
+    padding:9px;
+    border-radius: 3px;
+}
+
+.blankspace {
+    padding-right: 15px;
+}
+
+.welcomelinks {
+    position:absolute;
+    bottom:30px;
+}
+
+.lineh {
+    line-height: 1.9rem;
+}
+
+#trustpilot {
+    background-color: forestgreen;
+}
+
+#googlereviews {
+    background-color: blue;
 }

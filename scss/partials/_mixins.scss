@@ -66,3 +66,13 @@
   }
 
 }
+
+@mixin grayscale {
+  .clients img {
+    filter:grayscale(100%)
+}
+
+  .clients img:hover {
+      filter:none;
+  }
+}

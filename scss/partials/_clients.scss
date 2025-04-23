@@ -5,8 +5,6 @@
     opacity: 0;
     top: auto;
     padding: 20px;
-    text-align: center;
-    box-sizing: border-box;
     bottom: 140%;
     margin: 0 auto 50px;
 }
@@ -47,7 +45,6 @@
 
 .clientlink {
     @include clientlink;
-    margin: auto;
 }
 
 #girlguidinganglia {
