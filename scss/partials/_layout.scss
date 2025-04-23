@@ -12,6 +12,7 @@ box-sizing: border-box;
 }
 
 .container {
+    display: flex;
     margin-right: auto;
     margin-left: auto;
     padding-left: 15px;
@@ -22,17 +23,22 @@ box-sizing: border-box;
     
 
     @media (min-width: 768px) {
-        width: 730px;
+        .container {
+            width: 730px;
+        }
     }
 
     @media (min-width: 992px) {
-        width: 970px;
-        
+        .container {
+            width: 970px;
+        }
     }
 
     @media (min-width: 1260px) {
-        width: 1200px;
-    }
+        .container {
+            width: 1200px;
+        }
+    }   
 
 }
 
