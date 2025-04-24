@@ -1,10 +1,20 @@
 # assessment_
 HTML CSS Assessment
-girguidinganglia button layout messed up
+
+FOOTER:
 copyright not lined up.
+
+GRAYSCALE PARTNERS:
 add triangles to clients
+text messed up
+
+LATEST NEWS:
 disappear one news thing when screen is small enough?
 latest news and view all above news headings
 
+WELCOME TO NETMATTERS:
 add arrows to the welcome part
-add floating effect to news and our services
+add more star symbols
+
+OUR SERVICES:
+icons do not go white when hovering

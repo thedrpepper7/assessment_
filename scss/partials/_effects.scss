@@ -8,3 +8,12 @@
 .clients img:hover {
     filter:none;
 }
+
+/* images raise up */
+
+@mixin raise {
+    &:hover {
+        top:-10px;
+        transition: .5s ease;
+    }
+}

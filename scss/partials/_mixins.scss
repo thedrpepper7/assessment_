@@ -81,3 +81,23 @@
   margin-left:auto;
   margin-right:auto;
 }
+
+/* our services */
+
+@mixin iconcolor ($iconcolor) {
+  color: white;
+  background-color: $iconcolor;
+  padding:8px;
+  border: 2px solid $iconcolor;
+  border-radius: 50%;  
+}
+
+@mixin rmore ($rmore) {
+  display: inline-block;
+  background-color: $rmore;
+  border-radius: 3px;
+  color:white;
+  padding:6px;
+  text-decoration: none;
+  
+}

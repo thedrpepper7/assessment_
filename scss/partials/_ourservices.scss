@@ -17,12 +17,16 @@
 
 
 .bespoke, .ITsup, .digitalmarketing, .telecoms, .webdesign, .cybersecurity, .developertraining {
-    padding: 10px;
+    padding: 20px;
     background-color: whitesmoke;
     border: 1px grey dotted;
     border-radius: 5px;
     width: 100%;
+    position: relative;
+    top: 0;
+   @include raise;
 }
+
 
 .ourservices {
     text-align: center;
@@ -75,32 +79,138 @@
     font-family: 'icomoon';
     font-weight: normal;
     font-style: normal;
+    font-size: 2rem;
 }
+
+// bespoke software
 
 #computer::before {
     content: "\e957";
+    @include iconcolor(#67809f);
 }
+
+.bsrmore {
+    @include rmore(#f7b322);
+}
+
+.bespoke:hover {
+    background-color: #67809f;
+    .bsrmore {
+        color:#67809f;
+        background-color: white;
+    }
+}
+
+// it support 
 
 #supit::before {
     content: "\e956";
+    @include iconcolor(#4183d7);
 }
+
+.itrmore {
+    @include rmore(#4183d7);
+}
+
+.ITsup:hover {
+    background-color: #4183d7;
+    .itrmore {
+        color: #4183d7;
+        background-color: white;
+    }
+}
+
+// digital marketing
 
 #marketing::before {
     content:  "\e99d";
+    @include iconcolor(#2ecc71);
 }
+
+.dgrmore {
+    @include rmore(#2ecc71);
+}
+
+.digitalmarketing:hover {
+    background-color: #2ecc71;
+    .dgrmore {
+        background-color: white;
+        color: #2ecc71;
+    }
+}
+
+// telecoms services
 
 #telecomservice::before {
     content: "\e942";
+    @include iconcolor(#d64541);
 }
+
+.tsrmore {
+    @include rmore(#d64541);
+}
+
+.telecoms:hover {
+    background-color: #d64541;
+    .tsrmore {
+        background-color: white;
+        color:#d64541;
+    }
+}
+
+// web design
 
 #wd::before {
     content: "\ea80";
+    @include iconcolor(#926fb1);
 }
+
+.wdrmore {
+    @include rmore(#926fb1);
+}
+
+.webdesign:hover {
+    background-color: #926fb1;
+    .wdrmore {
+        background-color: white;
+        color:#926fb1;
+    }
+}
+
+// cyber security
 
 #security::before {
     content: "\e9b4";
+    @include iconcolor(#f62459);
 }
+
+.csrmore {
+    @include rmore(#f62459);
+}
+
+.cybersecurity:hover {
+    background-color: #f62459;
+    .csrmore {
+        color: #f62459;
+        background-color: white;
+    }
+}
+
+// developer training
 
 #training::before {
     content: "\e921";
+    @include iconcolor(#ce4125);
+}
+
+.dtrmore {
+    @include rmore(#ce4125);
+}
+
+.developertraining:hover {
+    background-color:#ce4125;
+    .dtrmore {
+        color:#ce4125;
+        background-color: white;
+    }
 }
