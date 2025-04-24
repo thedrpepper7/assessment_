@@ -1,3 +1,16 @@
+#protected {
+    padding-bottom: 25px;
+}
+
+#fom {
+    font-family: 'icomoon';
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 20px;
+    border-radius: 5px;
+}
+
 #imgcover {
     background-image: url('../img/cyber.png');
     background-repeat: no-repeat;
@@ -8,7 +21,14 @@
 }
 
 #cybertxt {
-    text-align: center;
+    position: relative;
+    left:-10%;
+    width: 50%;
+    @include center;
     padding: 50px;  
     color: white;  
+}
+
+#fom::after {
+    content: "\ea3c";
 }
