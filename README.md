@@ -15,6 +15,7 @@ latest news and view all above news headings
 WELCOME TO NETMATTERS:
 add arrows to the welcome part
 add more star symbols
+google trust pilot buttons overlap when screen shortened
 
 OUR SERVICES:
 icons do not go white when hovering

@@ -214,3 +214,32 @@
         background-color: white;
     }
 }
+
+// intro
+
+.introservices {
+display: grid;
+grid-template-columns: auto 1fr auto;
+grid-template-rows: auto;
+align-items: center;
+padding: 10px 20px;
+}
+
+.blankspace2 {
+width: 100%;
+display: inline-block;
+height: auto;
+}
+
+#viewwork {
+    text-decoration: none;
+    color:black;
+    &::after {
+        font-family: 'icomoon';
+        content: "\ea3c";
+
+    }
+    &:hover {
+        text-decoration: underline;
+    }
+}
