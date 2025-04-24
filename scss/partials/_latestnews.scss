@@ -1,3 +1,4 @@
+@import 'effects.scss';
 
 .latestnews {
     display:grid;
@@ -24,6 +25,10 @@
 
 .roys, .mnotables, .hiring {
     border:1px dotted grey;
+    position: relative;
+    top:0;
+    @include raise;
+    
 }
 
 .seperator {
@@ -56,4 +61,3 @@
     max-width: 66%;
     
 }
-
