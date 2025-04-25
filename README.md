@@ -19,3 +19,8 @@ google trust pilot buttons overlap when screen shortened
 
 OUR SERVICES:
 icons do not go white when hovering
+
+CYBER SECURITY:
+add gradient 
+add dots on bottom middle
+
