@@ -4,7 +4,7 @@
     position: absolute;
     opacity: 0;
     top: auto;
-    padding: 20px;
+    padding: auto;
     bottom: 140%;
     margin: 0 auto 50px;
 }
@@ -36,15 +36,18 @@
 
 }
 
-.clientlink {
-    @include clientlink;
-}
 
 #girlguidinganglia {
     background-color: blue;
 }
 
-#sweetzy {
+#sweetzylink {
     background-color: green;
+}
+
+#girlguidinganglia, #sweetzylink {
+    text-decoration: none;
+    color:white;
+    padding:5px;
 }
 

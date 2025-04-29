@@ -23,6 +23,8 @@
   }
 
 .wlcmnet, .whtclnts {
+    display: flex;
+    flex-wrap: wrap;
     padding-left:10px;
     padding-right: 10px;
     width: calc(50% -20px);
@@ -45,6 +47,8 @@
 .slink {
     text-decoration: none;
     color:white;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .wlink {
@@ -53,6 +57,10 @@
     background-color: #272936;
     padding:9px;
     border-radius: 3px;
+    &::after {
+        content: "\ea3c";
+        font-family: 'icomoon';
+    }
 }
 
 .blankspace {
@@ -60,8 +68,8 @@
 }
 
 .welcomelinks {
-    position:absolute;
-    bottom:30px;
+    display: flex;
+    align-items: end;
 }
 
 .lineh {
