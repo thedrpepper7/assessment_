@@ -10,7 +10,7 @@ nav {
     padding: 1.3em;
     align-items: center;
     @include center;
-
+    max-width: 100%;
 }
 
 
@@ -26,6 +26,16 @@ nav ul li {
     align-items: stretch;
     max-height: 100%;
 }
+
+.top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    @include center;
+    flex-wrap: nowrap;
+}
+
 
 
 // link style
@@ -58,6 +68,7 @@ nav ul li {
     display: flex;
     flex-wrap: nowrap;
     gap:15px;
+    max-width: 100%;
 }
 
 #magnifier, #burger {
@@ -80,3 +91,67 @@ nav ul li {
     border-radius: 5px;
     content: "\e9bd";
 }
+
+
+// mobile search bar
+
+#mobilesearchid {
+    width: 100%;
+    height: 60px;
+    background-color: rgba(0,0,0,.1);
+    
+}
+
+.mobilesearchclass {
+    padding: 10px;
+    width: 100%;
+}
+
+// adjusting screen size
+
+@media (max-width: 1260px) {
+    #search {
+        display: none;
+    }
+}
+
+@media (max-width: 991px) {
+    #supportlink, #contactlink {
+        display: none;
+    }
+
+    #search {
+        display: flex;
+        align-items: stretch;
+        height: 56px;
+    }
+}
+
+@media (min-width:875px) {
+    #mobilesearchid {
+        display: none;
+    }
+}
+
+@media (max-width: 874px) {
+    nav {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    #search {
+        display: none;
+    }
+
+    #magnifier::after {
+        content: "\e942";
+        color:black;
+        background-color: white;
+    }
+
+    .top-row {
+        margin: auto;
+        width: 100%;
+    }
+}
+
