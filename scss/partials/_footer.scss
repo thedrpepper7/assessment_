@@ -1,4 +1,4 @@
-@import '../partials/mixins';
+@import 'mixins.scss';
 
 
 
@@ -13,15 +13,14 @@
 footer {
     background-color: #323544;
     color: #fff;
-    margin-left: 0;
-    margin-right:0;
     
     
     
 
     .footer-row{
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
+        @include center;
         
         .footer-menu {
             flex: 75%;
@@ -73,3 +72,62 @@ footer {
     position: flex;
     width:100%;
 }
+
+// social medias
+
+.socialmedias {
+    display: flex;
+    flex-wrap: nowrap;
+    gap:20px;
+    & a {
+        text-decoration: none;
+    }
+}
+
+#facebook, #instagram, #indeed, #twitter {
+    background-color: #212330;
+    padding:20px;
+    font-size: 1.9rem;
+    color:white;
+}
+
+#facebook::after {
+    content: "\ea90";
+}
+
+#fblink:hover {
+    #facebook{
+        background-color: blue;
+    }
+}
+
+#indeed::after {
+    content: "\eac9";
+}
+
+#inlink:hover {
+    #indeed {
+        background-color: lightblue;
+    }
+}
+
+#twitter::after {
+    content: "\ea96";
+}
+
+#twtlink:hover {
+    #twitter {
+        background-color: cyan;
+    }
+}
+
+#instagram::after {
+    content: "\ea92";
+}
+
+#iglink:hover {
+    #instagram {
+        background-color: palevioletred;
+    }
+}
+
