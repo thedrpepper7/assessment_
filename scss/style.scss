@@ -10,27 +10,5 @@
 @import 'partials/ourservices';
 @import 'partials/slides';
 @import 'partials/mainnav';
-
-
-.top {
-  display: flex;
-  gap: 20px;
-  flex-wrap: nowrap;
-}
-
-.top img {
-  display: block;
-  max-width: 100%;
-}
-
-#search {
-  display: inline-flex;
-  background-color: grey;
-  width: 100%;
-  height: 50px;
-  box-shadow: inset 0 0 2px 2px purple;
-  padding: 5px;
-  
-}
-
+@import 'partials/searchbar';
 

@@ -1,0 +1,82 @@
+@import 'effects.scss';
+
+
+.icomoon {
+    font-family: 'icomoon';
+}
+
+nav {
+    display: flex;
+    padding: 1.3em;
+    align-items: center;
+    @include center;
+
+}
+
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+nav ul li {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    max-height: 100%;
+}
+
+
+// link style
+
+#contactlink, #supportlink{
+    text-decoration: none;
+    padding:15px;
+    border-radius: 5px
+}
+
+#contactlink {
+    background-color: #84858f;
+    &::before {
+        font-family: 'icomoon';
+        content: "\e949";
+    }
+}
+
+#supportlink {
+    background-color: #2665b5;
+    &::before {
+        font-family: 'icomoon';
+        content: "\e9cc";
+    }
+}
+
+// symbols 
+
+.headersymbols {
+    display: flex;
+    flex-wrap: nowrap;
+    gap:15px;
+}
+
+#magnifier, #burger {
+    display: flex;
+    align-items: stretch;
+    color:white;
+    border-radius: 5px;
+}
+
+#magnifier::after {
+    padding: 9px;
+    background-color: #7e808a;
+    border-radius: 0px 5px 5px 0px;
+    content: "\e986";
+}
+
+#burger::after {
+    padding: 9px;
+    background-color: #22242e;
+    border-radius: 5px;
+    content: "\e9bd";
+}
