@@ -1,8 +1,6 @@
 # assessment_
 HTML CSS Assessment
 
-FOOTER:
-copyright not lined up.
 
 GRAYSCALE PARTNERS:
 add triangles to clients
