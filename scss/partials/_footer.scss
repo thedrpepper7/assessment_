@@ -68,9 +68,13 @@ footer {
 }
 
 #copyright {
-    align-items: center;
-    position: flex;
-    width:100%;
+    text-align: center;
+    max-width:100%;
+    background-color: #212330;
+    margin:0 auto;
+    padding: 5px;
+    padding-left: 100px;
+    
 }
 
 // social medias

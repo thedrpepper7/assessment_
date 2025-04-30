@@ -21,6 +21,10 @@
     justify-content:center ;
 }
 
+#navcontainer a {
+    text-decoration:none;
+}
+
 .lightpoppins, .heavypoppins {
     text-align: center;
     line-height: .75em;
@@ -56,30 +60,37 @@
 
 #nav_comp::after {
     content: "\e957";
+    color: #526781;
 }
 
 #nav_monitor::after {
     content: "\e956";
+    color: #286abd;
 }
 
 #nav_stats::after {
     content:  "\e99d";
+    color: #25a25a;
 }
 
 #nav_phone::after {
     content: "\e942";
+    color: #bc2c28;
 }
 
 #nav_web::after {
     content: "\ea80";
+    color: #79539a;
 }
 
 #nav_shield::after {
     content: "\e9b4";
+    color: #de093f;
 }
 
 #nav_hat::after {
     content: "\e921";
+    color: #a3331d;
 }
 
 .popupheader {
@@ -100,7 +111,8 @@
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    z-index: -1; 
+    z-index: -1;
+    color:white;
 }
 
 
@@ -138,6 +150,10 @@
     #nav_bespoke {
         background-color: #526781;
     }
+
+    #nav_comp::after {
+        color: white;
+    }
 }
 
 #hover_bespoke:hover #nav_background_bespoke {
@@ -149,6 +165,10 @@
 #hover_support:hover {
     #nav_itsup {
         background-color: #286abd;
+    }
+
+    #nav_monitor::after {
+        color:white;
     }
 }
 
@@ -162,6 +182,10 @@
     #nav_digitalm {
         background-color: #25a25a;
     }
+
+    #nav_stats::after {
+        color:white;
+    }
 }
 
 #hover_marketing:hover #nav_background_marketing{
@@ -173,6 +197,10 @@
 #hover_telecoms:hover {
     #nav_telecoms {
         background-color: #bc2c28;
+    }
+
+    #nav_phone::after {
+        color:white;
     }
 }
 
@@ -186,6 +214,10 @@
     #nav_webdesign {
         background-color: #79539a;
     }
+
+    #nav_web::after {
+        color:white;
+    }
 }
 
 #hover_web_design:hover #nav_background_web_design{
@@ -198,6 +230,10 @@
     #nav_cybersecurity {
         background-color: #de093f;
     }
+
+    #nav_shield::after {
+        color:white;
+    }
 }
 
 #hover_cyber_security:hover #nav_background_cyber_security{
@@ -209,6 +245,10 @@
 #hover_developer_course:hover {
     #nav_developer {
         background-color: #a3331d
+    }
+
+    #nav_hat::after {
+        color:white;
     }
 }
 

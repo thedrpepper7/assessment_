@@ -9,9 +9,8 @@ add triangles to clients
 
 
 OUR SERVICES:
-icons do not go white when hovering
+icons to the popup text
 
 CYBER SECURITY:
 add gradient 
-add dots on bottom middle
 
