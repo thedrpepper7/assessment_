@@ -41,9 +41,8 @@
 
 #cybertxt {
     position: relative;
-    left:-10%;
+    left:20%;
     width: 50%;
-    @include center;
     padding: 50px;  
     color: white;  
 }
@@ -63,5 +62,11 @@
         margin:auto;
         left:0;
         right:0;
+    }
+}
+
+@media (max-width : 556px) {
+    #cybertxt {
+        width: 100%;
     }
 }

@@ -1,5 +1,39 @@
 #popoutmenu {
-    min-width: 15vw;
-    background-color: red;
-    height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 350px;
+  height: 100vh;        /* full viewport height */
+  overflow-y: auto;     /* enables vertical scroll */
+  background: #333;
+  color: white;
+  display: none;
+  background-color: #333645;
+  padding: 0px;
+  & li {
+    width: 100%;
+  }
+  & ul {
+    padding: 0px;
+    margin: 0px;
+  }
 }
+
+.servicespopout, .ourworkpopout, .ourknowledgepopout, .trainingpopout, .ourcompanypopout, .contactuspopout {
+    
+    background-color: rgba(0,0,0,.25);
+    & li {
+        padding: 15px 15px;
+        border-top: 1px solid hsla(0,0%,100%,.05);
+    }
+} 
+
+.popoutheader {
+    padding: 20px 10px;
+    background-color: #333645;
+}
+
+.no-events {
+    pointer-events: none;
+}
+
