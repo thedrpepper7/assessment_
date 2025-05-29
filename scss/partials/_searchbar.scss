@@ -95,6 +95,15 @@ nav ul li {
     content: "\e9bd";
 }
 
+#burger.burgerclose::after {
+    padding: 9px;
+    font-family: 'icomoon';
+    background-color: #22242e;
+    border-radius: 5px;
+    content: '\e903';
+
+}
+
 
 // mobile search bar
 
