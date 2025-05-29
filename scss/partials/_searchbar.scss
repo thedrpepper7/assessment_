@@ -9,6 +9,7 @@ nav {
     display: flex;
     padding: 1.3em;
     align-items: center;
+    justify-content: center;
     @include center;
     max-width: 100%;
 }
