@@ -1,9 +1,5 @@
 @import 'effects.scss';
 
-#protected {
-    padding-bottom: 25px;
-}
-
 #fom {
     display: inline-block;
     font-family: 'icomoon';
@@ -14,59 +10,82 @@
     border-radius: 5px;
 }
 
+#fom::after {
+    content: "\ea3c";
+}
+
 #imgcover {
-    background-image: url('../img/cyber.png');
+    background-image: url('../img/technology.png');
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: rgba(0, 0, 0, 0.4);
     background-position: center;
     width: 100%;
     height: 500px;
     position: relative;
 }
 
-.dots::after {
-    content: "\ea55\ea54\ea54\ea54\ea54"; ;
-    font-family: 'icomoon';
-    color:black;
-    gap:10px;
-    display: inline-block;
+#slider-content {
     position: absolute;
-    left:50%;
-    bottom:10%;
-    letter-spacing: 1.2rem;
-    transform: translate(-50%);
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 100%;
+    top:10%;
+    left:15%;
+    align-content: center;
+    & h1 {
+        max-width: 100%;
+        font-size: 2.5rem;
+    }
 }
 
+#imagesliderdots {
+    position: absolute;
+    bottom: 30px;         
+    left: 50%;             
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
 
-#cybertxt {
+.imagedots::after {
+    content: '\e901';
+    font-size: 2rem;
+    font-family: 'icomoon';
+    width: 0;
+    height: 0;
     position: relative;
-    left:20%;
-    width: 50%;
-    padding: 50px;  
-    color: white;  
+    display: inline-block;
+    // color:hsla(0,0%,100%,.5);
+    color:blue;
+
 }
 
-#fom::after {
-    content: "\ea3c";
-}
-
-.changingslides {
-    height: auto;
-    z-index:1;
+.selected::after {
+    content: '\e9aa';
+    font-size: 2rem;
+    font-family: 'icomoon';
+    width: 0;
+    height: 0;
+    position: relative;
+    display: inline-block;
+    color:blue;
 }
 
 @media (max-width:992px) {
-    #cybertxt {
+    #slider-content {
         text-align: center;
-        margin:auto;
         left:0;
+        display: block;
         right:0;
+        & h1 {
+            font-size: 1.5rem;
+        }
     }
 }
 
 @media (max-width : 556px) {
-    #cybertxt {
+    #slider-content {
         width: 100%;
     }
 }
