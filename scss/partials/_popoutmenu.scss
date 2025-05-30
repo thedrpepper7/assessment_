@@ -44,6 +44,9 @@
 }
 
 @media (max-width: 992px) {
+  .servicespopout, #mobile-services {
+    display: none;
+  }
   .mobilepopout {
     display: block;
     text-align: center;
@@ -52,12 +55,76 @@
       background-color: rgba(0,0,0,.25);
       padding: 10px;
       margin:0px 15px;
-      text-align: center;
       width:150px;
-      height: 50px;
+      height: 70px;
+      align-items: center;
     }
-    #mobile-popout-bespoke {
-      padding: 20px 0px;
+
+    .bespoke-software {
+      margin: 20px 0px;
     }
+    #mobile-popout-bespoke, 
+    #mobile-popout-it-support, 
+    #mobile-popout-digital-marketing, 
+    #mobile-popout-telecoms-services, 
+    #mobile-popout-web-design,
+    #mobile-popout-cyber-security,
+    #mobile-popout-developer-course{
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      height: 100px;
+      padding: 10px;
+      margin: 20px 15px;
+      & span {
+        flex-basis: 100%;
+        font-size: 1rem;
+        justify-content: center;
+      }
+      
+    }
+  }
+  #mobile-popout-contact {
+    height: 50px;
+    margin: 20px 15px;
+    font-size: large;
+    
+  }
+}
+
+#mobile-popout-bespoke::before {
+  content: '\e957';
+}
+
+#mobile-popout-it-support::before {
+  content: '\e956';
+}
+
+#mobile-popout-digital-marketing::before {
+  content: '\e99d';
+}
+
+#mobile-popout-telecoms-services::before {
+  content: '\e942';
+}
+
+#mobile-popout-web-design::before {
+  content: '\ea80';
+}
+
+#mobile-popout-cyber-security::before {
+  content: '\e9b4';
+}
+
+#mobile-popout-developer-course::before {
+  content: '\e921';
+}
+
+.ourworkpopout, .ourknowledgepopout, .trainingpopout, .ourcompanypopout, .contactuspopout {
+  & li::before {
+    font-family: 'icomoon';
+    content: '\ea3c';
   }
 }
