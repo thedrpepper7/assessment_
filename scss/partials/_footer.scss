@@ -62,7 +62,6 @@ footer {
 
 #footrlogo {
     max-width: 100%;
-    padding-right: 60px;
     padding-top: 40px;
     gap:20px;
 }
@@ -135,3 +134,20 @@ footer {
     }
 }
 
+@media (max-width: 992px) {
+    .container div {
+        flex-wrap: wrap;
+        text-align: center;
+        & .footer-menu {
+            justify-content: center;
+            & img {
+                justify-content: center;
+                padding: 0;
+                margin:0;
+            }
+        }
+        & .socialmedias {
+            justify-content: center ;
+        }
+    }
+}
