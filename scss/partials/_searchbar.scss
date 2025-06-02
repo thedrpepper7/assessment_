@@ -75,6 +75,7 @@ nav ul li {
     flex-wrap: nowrap;
     gap:15px;
     max-width: 100%;
+    height: 56px;
 }
 
 #magnifier, #burger {
@@ -108,28 +109,6 @@ nav ul li {
 }
 
 
-// mobile search bar
-
-#mobilesearchid {
-    width: 100%;
-    height: 60px;
-    background-color: rgba(0,0,0,.1);
-    
-}
-
-.mobilesearchclass {
-    padding: 10px;
-    width: 100%;
-}
-
-// adjusting screen size
-
-@media (max-width: 1260px) {
-    #search {
-        display: none;
-    }
-}
-
 @media (max-width: 991px) {
     #supportlink, #contactlink {
         display: none;
@@ -148,8 +127,29 @@ nav ul li {
     }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 760px) {
     #mobilesearch {
         display: flex;
+        min-width: 100%;
+        padding:10px;
+        background-color: rgba(0,0,0,.1);
+        border: 2px solid rgba(0,0,0,.1);
+    }
+    nav {
+        flex-wrap: wrap;
+        & #mobilesearchdiv {
+            flex-basis: 100%;
+            margin: 5px;
+        }
+    }
+    .top-row {
+        width: 100vw;
+    }
+    #search {
+        display: none;
+    }
+    #magnifier::after {
+        content: '\e942';
+        border-radius: 5px;
     }
 }
