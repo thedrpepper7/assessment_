@@ -47,6 +47,9 @@
   .servicespopout, #mobile-services {
     display: none;
   }
+  #popoutmenu {
+    max-width: 275px;
+  }
   .mobilepopout {
     display: block;
     text-align: center;

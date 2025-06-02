@@ -80,19 +80,69 @@ let sliders = [
     cybersecurity
 ]
 
-for (let i = 0; i < dots.length; i++){
-    sliders[i].button.addEventListener('click', (e)=>{
-        dots.forEach(dot => {
-            dot.classList.remove('selected');
-            dot.classList.add('imagedots');
-        })
-        imageplacholder.style.backgroundImage = `url(${sliders[i].image})`;
-        slide_description.innerHTML = `<strong>${sliders[i].description}</strong>`
-        slide_header.innerHTML = `${sliders[i].header}`
-        e.target.className = `selected`;
+// // JavaScript
+// let currentIndex = 0;
 
-    })
+// setInterval(() => {
+//   // Remove 'selected' from all
+//   dots.forEach(dot => dot.classList.remove('selected'));
 
+//   // Add 'selected' to current index
+//   dots[currentIndex].classList.add('selected');
+
+//   // Move to next index
+//   currentIndex = (currentIndex + 1) % dots.length;
+// }, 5000); 
+
+// for (let i = 0; i < dots.length; i++){
+//     sliders[i].button.addEventListener('click', (e)=>{
+//         dots.forEach(dot => {
+//             dot.classList.remove('selected');
+//             dot.classList.add('imagedots');
+//         })
+//         imageplacholder.style.backgroundImage = `url(${sliders[i].image})`;
+//         slide_description.innerHTML = `<strong>${sliders[i].description}</strong>`
+//         slide_header.innerHTML = `${sliders[i].header}`
+//         e.target.className = `selected`;
+
+//     })
+
+// }
+
+
+// Automatic slider
+let currentIndex = 0;
+
+function updateSlide(index) {
+  dots.forEach(dot => {
+    dot.classList.remove('selected');
+    dot.classList.add('imagedots');
+  });
+
+  imageplacholder.style.backgroundImage = `
+  linear-gradient(to right, 
+    rgba(0, 0, 0, 0.5) 0%, 
+    rgba(0, 0, 0, 0) 25%, 
+    rgba(0, 0, 0, 0) 75%, 
+    rgba(0, 0, 0, 0.5) 100%
+  ), url(${sliders[index].image})
+`;
+  slide_description.innerHTML = `<strong>${sliders[index].description}</strong>`;
+  slide_header.innerHTML = `${sliders[index].header}`;
+  dots[index].classList.add('selected');
+  currentIndex = index;
 }
+
+setInterval(() => {
+  let nextIndex = (currentIndex + 1) % sliders.length;
+  updateSlide(nextIndex);
+}, 5000);
+
+for (let i = 0; i < dots.length; i++) {
+  sliders[i].button.addEventListener('click', () => {
+    updateSlide(i);
+  });
+}
+
 
 
