@@ -39,6 +39,9 @@ nav ul li {
     flex-wrap: nowrap;
 }
 
+#mobilesearch {
+    display: none;
+}
 
 
 // link style
@@ -145,27 +148,8 @@ nav ul li {
     }
 }
 
-@media (max-width: 874px) {
-    nav {
-        flex-wrap: wrap;
-        & img {
-            max-width: 100%;
-        }
-    }
-
-    #search {
-        display: none;
-    }
-
-    #magnifier::after {
-        content: "\e942";
-        color:black;
-        background-color: white;
-    }
-
-    .top-row {
-        margin: auto;
-        width: 100%;
+@media (max-width: 992px) {
+    #mobilesearch {
+        display: flex;
     }
 }
-

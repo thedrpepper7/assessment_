@@ -15,7 +15,11 @@ menu.addEventListener('click', () => {
         popoutmenu.style.display = 'block';
         everythingelse.style.overflow = 'hidden';
         everythingelse.style.position = 'relative';
-        everythingelse.style.left = '-350px';
+        if (window.innerWidth < 993) {
+            everythingelse.style.left = '-275px'
+        } else if (window.innerWidth > 992) {
+            everythingelse.style.left = '-350px';
+        }
         menu.classList.add('burgerclose');
     }
 });
