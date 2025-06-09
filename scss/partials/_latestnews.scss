@@ -4,7 +4,7 @@
     display:grid;
     grid-template-columns:repeat(auto-fit, 370px);
     justify-content: center;
-    grid-gap:10px;
+    grid-gap:20px;
     padding-bottom:50px;
     padding-top:10px;
     margin:auto;
@@ -52,15 +52,11 @@
 }
 
 .newstitle {
-    display: flex;
-    justify-content: space-between;
-    box-sizing: border-box;
-    width: 1130px;
-    margin-left:auto;
-    margin-right:auto;
-    max-width: 66%;
-    
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
+
 
 @media (max-width: 1260px) {
     .hiring {

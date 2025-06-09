@@ -5,7 +5,6 @@ body {
     margin: 0;
     min-height: 100vh;
     height: 100vh;
-    display: flex;
     padding: 0;
 }
 
@@ -14,11 +13,6 @@ box-sizing: border-box;
 font-family: 'Poppins', sans-serif;
 
 }
-
-#mainwrap {
-    overflow-x: hidden;
-}
-
 
 .container {
     display: flex;
@@ -92,3 +86,31 @@ font-family: 'Poppins', sans-serif;
     padding:6px;
     border-radius:100%;
 }
+
+// content wrapper 
+
+@media (min-width: 768px) {
+    .contentwrap {
+        max-width: 750px;
+        width:100%;
+        @include contentsizing;
+    }
+}
+
+@media (min-width: 992px) {
+    .contentwrap {
+        max-width: 970px;
+        width: 100%;
+        @include contentsizing;
+    }
+}
+
+
+@media (min-width: 1260px) {
+    .contentwrap {
+        max-width: 1200px;
+        width: 100%;
+        @include contentsizing;
+}
+}
+

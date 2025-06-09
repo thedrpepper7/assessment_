@@ -13,3 +13,7 @@ CYBER SECURITY:
 add gradient 
 
 add colors to the popout menu icons
+
+
+
+FIX CLIENTS, BEFORE IT WAS GRID NOW IT NEEDS TO BE FLEX, WAS CAUSING OVERFLOW

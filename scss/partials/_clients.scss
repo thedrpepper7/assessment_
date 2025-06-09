@@ -14,16 +14,16 @@
     display: inline-block;
 }
 
-.clients {
-    display: grid;
-    grid-auto-flow: row;
-    max-height: 100px;
-    padding: 20px;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    margin: 30px 0;
-    grid-template-columns: auto auto auto auto auto auto;
-    grid-gap:5px;
-}
+// .clients {
+//     display: grid;
+//     grid-auto-flow: row;
+//     max-height: 100px;
+//     padding: 20px;
+//     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+//     margin: 30px 0;
+//     grid-template-columns: auto auto auto auto auto auto;
+//     grid-gap:5px;
+// }
 
 
 .clientsimages:hover .image1,

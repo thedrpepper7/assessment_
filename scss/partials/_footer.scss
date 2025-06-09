@@ -1,55 +1,19 @@
 @import 'mixins.scss';
 
 
+.footer-row {
+    display: flex;
+    flex-wrap: wrap;
+}
 
-
-.footer-menu {
-    flex: 20%;
-    padding: 20px;
-    
-    
+footer ul li {
+    font-size: .8125rem;
 }
 
 footer {
     background-color: #323544;
     color: #fff;
-    
-    
-    
-
-    .footer-row{
-        display: flex;
-        flex-wrap: nowrap;
-        @include center;
-        
-        .footer-menu {
-            flex: 75%;
-            margin-bottom: 30px;
-
-            @media (min-width: 768px){
-                flex: 50%;
-            }
-
-            @media (min-width: 992px) {
-                flex: 20%;
-                footer {
-                    margin-bottom: 0;
-                }
-            }
-
-            @media (min-width: 1260px){
-                margin-bottom: 40px;
-            }
-
-            h4 {
-                text-transform: uppercase;
-                font-size: 1rem;
-                margin-bottom: 26px;
-            }
-        }
-    }
-
-    
+    padding-top: 20px;
 }
 
 
@@ -62,17 +26,22 @@ footer {
 
 #footrlogo {
     max-width: 100%;
-    padding-top: 40px;
-    gap:20px;
 }
 
 #copyright {
-    text-align: center;
-    max-width:100%;
+    text-align: left;
     background-color: #212330;
-    margin:0 auto;
-    padding: 5px;
-    padding-left: 100px;
+    width: 100%;
+    color: white;
+    & p {
+        padding:10px 0;
+        margin-top:0;
+        font-size: .8125rem;
+        & a {
+            text-decoration: none;
+            color: white;
+        }
+    }
     
 }
 
@@ -90,7 +59,7 @@ footer {
 #facebook, #instagram, #indeed, #twitter {
     background-color: #212330;
     padding:20px;
-    font-size: 1.9rem;
+    font-size: 20px;
     color:white;
 }
 
@@ -134,20 +103,46 @@ footer {
     }
 }
 
-@media (max-width: 992px) {
-    .container div {
+.footer-row {
+    max-width: 100%;
+}
+
+.footer-section-1 {
+    flex-basis: 40%;
+}
+
+.footer-section-2 {
+    flex-basis: 15%;
+    margin-bottom: 40px;
+} 
+
+
+@media (max-width: 1260px) {
+    .footer-row {
         flex-wrap: wrap;
-        text-align: center;
-        & .footer-menu {
-            justify-content: center;
-            & img {
-                justify-content: center;
-                padding: 0;
-                margin:0;
-            }
-        }
-        & .socialmedias {
-            justify-content: center ;
-        }
     }
+
+    .footer-section-1 {
+        flex-basis: 100%;
+    }
+
+    .footer-section-2 {
+        flex-grow: 1;
+        max-width: 25%;
+    }
+}
+
+@media (max-width: 992px) {
+    .footer-section-2 {
+        flex-basis: 50%;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 576px) {
+
 }
