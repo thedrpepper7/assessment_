@@ -17,3 +17,14 @@ add colors to the popout menu icons
 
 
 FIX CLIENTS, BEFORE IT WAS GRID NOW IT NEEDS TO BE FLEX, WAS CAUSING OVERFLOW
+
+footer - done
+clients - 
+latest news - 
+about - 
+accreditations - 
+service cards - 
+banner - 
+navigation - 
+header - 
+structure - 

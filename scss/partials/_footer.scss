@@ -1,6 +1,13 @@
 @import 'mixins.scss';
 
 
+.row {
+    display: flex;
+    width: 100%;
+    margin-bottom: 40px;
+
+}
+
 .footer-row {
     display: flex;
     flex-wrap: wrap;
@@ -8,6 +15,7 @@
 
 footer ul li {
     font-size: .8125rem;
+    line-height: 1.375rem;
 }
 
 footer {
@@ -58,8 +66,9 @@ footer {
 
 #facebook, #instagram, #indeed, #twitter {
     background-color: #212330;
-    padding:20px;
-    font-size: 20px;
+    padding:15px;
+    font-size: 26px;
+    font-weight: 400;
     color:white;
 }
 
@@ -103,57 +112,71 @@ footer {
     }
 }
 
-.footer-row {
-    max-width: 100%;
-}
 
-.footer-section-1 {
-    flex-basis: 40%;
-}
-
-.footer-section-2 {
-    flex-basis: 15%;
-    margin-bottom: 40px;
-} 
-
-
-@media (max-width: 1260px) {
-    .footer-row {
-        flex-wrap: wrap;
-    }
-
-    .footer-section-1 {
-        flex-basis: 100%;
-    }
-
-    .footer-section-2 {
-        flex-grow: 1;
-        max-width: 25%;
-    }
-}
+// applying the flex and flex wrap once its below 992px wide (the first breakpoint)
 
 @media (max-width: 992px) {
-    .footer-section-2 {
-        flex-basis: 50%;
+    .row {
+        display: flex;
         flex-wrap: wrap;
-    } 
+        margin-bottom: 60px;
+    }
 }
+
+
+// above 992px styling
+
+@media (min-width : 992px) {
+    .footer-row {
+        max-width: 100%;
+}
+
+    .footer-section-1 {
+        flex-basis: 40%;
+}
+    .row div {
+        flex-basis: 100%;
+    }
+}
+
+// between 992px and 768px
+
+@media (min-width: 768px) and (max-width:991px) {
+    .row {
+        width: 100%;
+        margin-bottom: 60px;
+        & div {
+            width: 50%;
+            flex-basis: 50%;
+            flex-direction: column;
+        }
+    }
+}
+
+// between 480px and 768px
+
+@media (max-width: 767px){
+   .row {
+    & div {
+        width: 100%;
+    }
+   }
+}   
+
+// lower than 480px 
 
 @media (max-width: 480px) {
     .socialmedias {
+        width:50%;
         flex-wrap: wrap;
-        max-width: 55%;
-        justify-content: flex-start;
         & p {
-            margin-top: 0;
             margin-bottom: 0;
-            padding: 0;
-            max-width: 100%;
-        } 
-        
+            margin-top: 0;
+            & a {
+                flex-basis: 50%;
+            }
+        }
     }
-    #facebook, #indeed, #twitter, #instagram {
-        padding: 12px 20px 16px;
-    }
-    
 }
+
+
