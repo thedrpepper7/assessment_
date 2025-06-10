@@ -136,13 +136,24 @@ footer {
     .footer-section-2 {
         flex-basis: 50%;
         flex-wrap: wrap;
+    } 
+}
+
+@media (max-width: 480px) {
+    .socialmedias {
+        flex-wrap: wrap;
+        max-width: 55%;
+        justify-content: flex-start;
+        & p {
+            margin-top: 0;
+            margin-bottom: 0;
+            padding: 0;
+            max-width: 100%;
+        } 
+        
     }
-}
-
-@media (max-width: 768px) {
-
-}
-
-@media (max-width: 576px) {
-
+    #facebook, #indeed, #twitter, #instagram {
+        padding: 12px 20px 16px;
+    }
+    
 }

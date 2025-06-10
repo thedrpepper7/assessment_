@@ -89,6 +89,12 @@ font-family: 'Poppins', sans-serif;
 
 // content wrapper 
 
+@media (max-width: 767px) {
+    .contentwrap {
+    @include contentsizing;
+    }
+}
+
 @media (min-width: 768px) {
     .contentwrap {
         max-width: 750px;
