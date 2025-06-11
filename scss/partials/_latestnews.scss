@@ -1,26 +1,46 @@
 @import 'effects.scss';
 
+//latest news and view all styling
+
+.newstitle {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 25px;
+}
+
+//the image cards dimensions
+.newsimage {
+    width: 100%;
+    height: 220px;
+}
+
+//the three cards styling
 .latestnews {
-    display:grid;
-    grid-template-columns:repeat(auto-fit, 370px);
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
     justify-content: center;
-    grid-gap:20px;
     padding-bottom:50px;
     padding-top:10px;
-    margin:auto;
-    max-width:100%;
+    width:100%;
+    justify-content: space-between
 }
 
-.casestudy {
-    @include latestnews(red);
+//spacing inside the cards 
+.mnotables, .hiring, .roys{
+    flex-basis: 33%;
+    & h3 {
+        height: 50px;
+    }
 }
 
-.team {
-    @include latestnews(purple);
-}
-
-.nettmatterstechnician {
-    @include latestnews(blue);
+//content styling inside
+.newsdescription, .casestudyroy, .notables, .hire {
+    padding: 0 10px;
+    margin-bottom: 30px;
+    height: 100px;
 }
 
 .roys, .mnotables, .hiring {
@@ -28,38 +48,87 @@
     position: relative;
     top:0;
     @include raise;
+    & a {
+        margin-left: 10px;
+        padding-left: 10px;
+    }
     
 }
 
+//probably an easier way to add the dotted line idk
 .seperator {
     border-bottom: 1px dotted grey;
     margin-top:50px;
 }
 
+//the "posted by netmatters part"
 .details {
     margin-top: 20px;
-    margin-left: 25%;
     align-items: center;
-}
-
-.details::before {
-    content: '';
-    display: inline-block;
-    background-image: url(../img/netmatters-logo.png);
-    background-size: contain; 
-    width: 20px;
-    height: 20px;
-}
-
-.newstitle {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+    display: flex;
+    gap:15px;
+    align-items: center;
+    flex-wrap: wrap;
+    position: absolute;
+    left: 20px;
+    bottom: 5%;
+    white-space: pre-line;
 }
 
 
+
+//top right tag basic styling
+.NewsTag {
+    position: absolute;
+    top:10px;
+    right: 0;
+    width: 75px;
+    text-align: center;
+    & a {
+        text-decoration: none;
+        color:white;
+        margin: 0
+    } 
+}
+
+//first card tag, text, button
+
+.roys .NewsTag {
+    background-color: #f62459;
+}
+
+.casestudy {
+    @include latestnews(#f62459);
+}
+
+//second card tag, text, button
+
+.mnotables .NewsTag {
+    background-color: #f7b322;
+}
+
+.team {
+    @include latestnews(#f7b322);
+}
+
+//third and final card tag, text, button
+
+.hiring .NewsTag {
+    background-color: #4183d7;
+}
+
+.nettmatterstechnician {
+    @include latestnews(#4183d7);
+}
+
+
+//breakpoints
 @media (max-width: 1260px) {
     .hiring {
         display: none;
     }
+    .roys, .mnotables {
+        flex-basis: 45%;
+    }
 }
+

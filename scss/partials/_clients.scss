@@ -7,7 +7,6 @@
     align-items: center;
     justify-content: space-between;
     & img {
-        display: flex;
         max-height: 70px;
         max-width: 200px;
         width: 100%;
@@ -18,14 +17,35 @@
 
 
 .image1, .image2, .image3, .image4, .image5, .image6 {
-    position: absolute;
     display: flex;
-    transform: translateX(25%);
+    flex-direction: column;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
     opacity: 0;
-    top: auto;
     padding: auto;
-    bottom: 140%;
+    width: 280px;
+    text-align: center;
     margin: 0 auto 50px;
+    & a {
+        margin-top: 20px;
+        &::after {
+            font-family: 'icomoon';
+            content: '\ea3c';
+        }
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        border-left: 24px solid transparent;
+        border-right: 24px solid transparent;
+        border-top: 24px solid #323544;
+}
+
 }
 
 .clientsimages {
@@ -58,4 +78,5 @@
     color:white;
     padding:5px;
 }
+
 

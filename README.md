@@ -18,8 +18,8 @@ add colors to the popout menu icons
 
 FIX CLIENTS, BEFORE IT WAS GRID NOW IT NEEDS TO BE FLEX, WAS CAUSING OVERFLOW
 
-footer - done
-clients - carousel effect to be added in javascript review
+footer - DONE
+clients - carousel effect to be added in javascript review (DONE tho)
 latest news - 
 about - 
 accreditations - 
