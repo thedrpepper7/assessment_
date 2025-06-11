@@ -1,7 +1,26 @@
 @import 'mixins';
 
+.clients {
+    display: flex;
+    max-width: 100%;
+    padding: 40px 0px;
+    align-items: center;
+    justify-content: space-between;
+    & img {
+        display: flex;
+        max-height: 70px;
+        max-width: 200px;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+}
+
+
 .image1, .image2, .image3, .image4, .image5, .image6 {
     position: absolute;
+    display: flex;
+    transform: translateX(25%);
     opacity: 0;
     top: auto;
     padding: auto;
@@ -13,18 +32,6 @@
     position: relative;
     display: inline-block;
 }
-
-// .clients {
-//     display: grid;
-//     grid-auto-flow: row;
-//     max-height: 100px;
-//     padding: 20px;
-//     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-//     margin: 30px 0;
-//     grid-template-columns: auto auto auto auto auto auto;
-//     grid-gap:5px;
-// }
-
 
 .clientsimages:hover .image1,
 .clientsimages:hover .image2,
