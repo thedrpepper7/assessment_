@@ -7,7 +7,17 @@
   justify-content: space-between;
   margin: 0 auto;
   max-width: 1200px;
+  letter-spacing: .4px;
   padding: 0 25px;
+}
+
+.viewall {
+    text-decoration: none;
+    color: black;
+    &::after {
+        font-family: 'icomoon';
+        content: '\ea3c';
+    }
 }
 
 //the image cards dimensions
@@ -25,7 +35,7 @@
     padding-bottom:50px;
     padding-top:10px;
     width:100%;
-    justify-content: space-between
+    justify-content: space-between;
 }
 
 //spacing inside the cards 
@@ -47,6 +57,7 @@
     border:1px dotted grey;
     position: relative;
     top:0;
+    box-shadow: 0 3px 35px rgba(0,0,0,0.1);
     @include raise;
     & a {
         margin-left: 10px;
@@ -73,8 +84,13 @@
     left: 20px;
     bottom: 5%;
     white-space: pre-line;
+    max-width: 100%;
+    line-height: 1.375rem;
 }
 
+#mobileVA {
+    display: none;
+}
 
 
 //top right tag basic styling
@@ -132,3 +148,30 @@
     }
 }
 
+@media (max-width: 768px) {
+    .hiring {
+        display: block;
+    }
+    .latestnews {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .roys, .mnotables, .hiring {
+        margin-bottom: 20px;
+    }
+    .newstitle {
+        display: inline-block;
+    }
+    #mobileVA {
+        display: block;
+        text-align: center;
+        & a {
+            text-decoration: none;
+            color:black;
+            &::after {
+                font-family: 'icomoon';
+                content: '\ea3c';
+            }
+        }
+    }
+}
