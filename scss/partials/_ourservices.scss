@@ -18,15 +18,31 @@
 
 .bespoke, .ITsup, .digitalmarketing, .telecoms, .webdesign, .cybersecurity, .developertraining {
     padding: 20px;
-    background-color: whitesmoke;
+    background-color: white;
     border: 1px grey dotted;
-    border-radius: 5px;
+    border-radius: 15px;
+    box-shadow: 0 3px 35px rgba(0,0,0,.1);
     width: 100%;
+    height: 300px;
     position: relative;
     top: 0;
    @include raise;
+   & p {
+    font-size: .8125rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+    color: #333645;
+    letter-spacing: .4px;
+   }
+   & h3 {
+    font-weight: 400;
+   }
 }
 
+.introservices h1 {
+    font-weight: 400;
+    font-size: 2.7rem;
+}
 
 .ourservices {
     text-align: center;
@@ -86,7 +102,7 @@
 
 #computer::before {
     content: "\e957";
-    @include iconcolor(#67809f);
+    @include iconcolor($bGrey);
 }
 
 .bsrmore {
@@ -94,10 +110,13 @@
 }
 
 .bespoke:hover {
-    background-color: #67809f;
+    background-color: $bGrey;
     .bsrmore {
         color:#67809f;
         background-color: white;
+    }
+    #computer::before {
+        @include hoverColor($bGrey);
     }
     
 }
@@ -106,37 +125,45 @@
 
 #supit::before {
     content: "\e956";
-    @include iconcolor(#4183d7);
+    @include iconcolor($itBlue);
 }
 
 .itrmore {
-    @include rmore(#4183d7);
+    @include rmore($itBlue);
 }
 
 .ITsup:hover {
-    background-color: #4183d7;
+    background-color: $itBlue;
     .itrmore {
-        color: #4183d7;
+        color: $itBlue;
         background-color: white;
     }
+    #supit::before {
+        @include hoverColor($itBlue);
+    }
+    
 }
 
 // digital marketing
 
 #marketing::before {
     content:  "\e99d";
-    @include iconcolor(#2ecc71);
+    @include iconcolor($dmGreen);
 }
 
 .dgrmore {
-    @include rmore(#2ecc71);
+    @include rmore($dmGreen);
 }
 
 .digitalmarketing:hover {
-    background-color: #2ecc71;
+    background-color: $dmGreen;
     .dgrmore {
         background-color: white;
-        color: #2ecc71;
+        color: $dmGreen;
+    }
+
+    #marketing::before {
+        @include hoverColor($dmGreen)
     }
 }
 
@@ -144,18 +171,21 @@
 
 #telecomservice::before {
     content: "\e942";
-    @include iconcolor(#d64541);
+    @include iconcolor($tcRed);
 }
 
 .tsrmore {
-    @include rmore(#d64541);
+    @include rmore($tcRed);
 }
 
 .telecoms:hover {
-    background-color: #d64541;
+    background-color: $tcRed;
     .tsrmore {
         background-color: white;
-        color:#d64541;
+        color:$tcRed;
+    }
+    #telecomservice::before {
+        @include hoverColor($tcRed)
     }
 }
 
@@ -163,18 +193,21 @@
 
 #wd::before {
     content: "\ea80";
-    @include iconcolor(#926fb1);
+    @include iconcolor($wdPurple);
 }
 
 .wdrmore {
-    @include rmore(#926fb1);
+    @include rmore($wdPurple);
 }
 
 .webdesign:hover {
-    background-color: #926fb1;
+    background-color: $wdPurple;
     .wdrmore {
         background-color: white;
-        color:#926fb1;
+        color:$wdPurple;
+    }
+    #wd::before {
+        @include hoverColor($wdPurple)
     }
 }
 
@@ -182,18 +215,21 @@
 
 #security::before {
     content: "\e9b4";
-    @include iconcolor(#f62459);
+    @include iconcolor($csPink);
 }
 
 .csrmore {
-    @include rmore(#f62459);
+    @include rmore($csPink);
 }
 
 .cybersecurity:hover {
-    background-color: #f62459;
+    background-color: $csPink;
     .csrmore {
-        color: #f62459;
+        color: $csPink;
         background-color: white;
+    }
+    #security::before {
+        @include hoverColor($csPink)
     }
 }
 
@@ -201,18 +237,21 @@
 
 #training::before {
     content: "\e921";
-    @include iconcolor(#ce4125);
+    @include iconcolor($dtMaroon);
 }
 
 .dtrmore {
-    @include rmore(#ce4125);
+    @include rmore($dtMaroon);
 }
 
 .developertraining:hover {
-    background-color:#ce4125;
+    background-color:$dtMaroon;
     .dtrmore {
-        color:#ce4125;
+        color:$dtMaroon;
         background-color: white;
+    }
+    #training::before {
+        @include hoverColor($dtMaroon)
     }
 }
 
@@ -242,5 +281,31 @@ height: auto;
     }
     &:hover {
         text-decoration: underline;
+    }
+}
+
+
+.serviceLink {
+    position: absolute;
+    bottom:  10%;
+    left:50%;
+    transform: translateX(-50%);
+}
+
+@media (max-width:1260px) {
+    .servicesL {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width:992px) {
+    .servicesS {
+        grid-template-columns: 1fr 1fr;
+    }
+    .digitalmarketing br {
+        display: none;
+    }
+    .serviceLink {
+        bottom:5%;
     }
 }

@@ -78,6 +78,17 @@
 
 /* our services */
 
+//colors 
+
+$bGrey : #67809f;
+$itBlue : #4183d7;
+$dmGreen : #2ecc71;
+$tcRed : #d64541;
+$wdPurple : #926fb1;
+$csPink : #f62459;
+$dtMaroon : #ce4125;
+
+
 @mixin iconcolor ($iconcolor) {
   color: white;
   background-color: $iconcolor;
@@ -94,6 +105,12 @@
   padding:6px;
   text-decoration: none;
   
+}
+
+@mixin hoverColor ($invert) {
+  color:$invert;
+  background-color: white;
+  border-color: white;
 }
 
 // nav popups 
