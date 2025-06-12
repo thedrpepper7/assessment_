@@ -1,12 +1,74 @@
 @import 'effects.scss';
 
+
+//background image
+#imgcover {
+    background-image: url('../img/technology.png');
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 550px;
+    position: relative;
+}
+
+#imgcover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25%; // gradient ends here
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(to right,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.7) 30%,
+    rgba(0, 0, 0, 0) 100%
+);
+
+}
+
+//space between element above
+#sliderheader {
+    margin-top: 0;
+    padding-top: 50px;
+}
+
+//content ontop of image
+#slider-content {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    color: white;
+    & h1 {
+        font-size: 4rem;
+        line-height: 5rem;
+        z-index: 21;
+    }
+    & p {
+        font-size:1.625rem;
+        line-height: 2.5rem;
+        width: 75%;
+        z-index: 21;
+    }
+    & a {
+        line-height: 50px;
+        padding: 5px 20px;
+        z-index: 21;
+    }
+}
+
+
+//button 
 #fom {
     display: inline-block;
     font-family: 'icomoon';
     text-decoration: none;
     color: white;
-    background-color: black;
-    padding: 20px;
+    background-color: $wdPurple;
+    font-size: 1.25rem;
     border-radius: 5px;
 }
 
@@ -14,30 +76,12 @@
     content: "\ea3c";
 }
 
-#imgcover {
-    background-image: url('../img/technology.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 500px;
-    position: relative;
+#fom:hover {
+    filter: brightness(85%);
 }
 
-#slider-content {
-    position: absolute;
-    flex-direction: column;
-    flex-wrap: wrap;
-    max-width: 100%;
-    top:10%;
-    left:15%;
-    align-content: center;
-    & h1 {
-        max-width: 100%;
-        font-size: 2.5rem;
-    }
-}
 
+//dots at bottom
 #imagesliderdots {
     position: absolute;
     bottom: 30px;         
@@ -72,20 +116,43 @@
     color:grey;
 }
 
+
+@media (max-width: 1260px){
+    #sliderheader , .csfind {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+}
+
 @media (max-width:992px) {
     #slider-content {
+        display: flex;
         text-align: center;
-        left:0;
-        display: block;
-        right:0;
         & h1 {
-            font-size: 1.5rem;
+            font-size: 2.5rem;
+            line-height: 3rem;
+            font-weight: 600;
         }
+        & p {
+            width: 100%;
+            font-size: 1.25rem;
+            line-height: 1.75rem;
+            font-weight: 600;
+        }
+    }
+    #sliderdescription {
+        width: 100%;
+        flex-basis: 100%;
+    }
+    #sliderheader {
+        margin-top: 50px;
     }
 }
 
 @media (max-width : 556px) {
-    #slider-content {
-        width: 100%;
+    #sliderheader {
+        margin-top: 10px;
+        padding-top: 10%;
     }
 }
