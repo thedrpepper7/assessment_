@@ -180,6 +180,7 @@ $dtMaroonDark : #a3331d;
   background-color: $color;
   position: absolute;
   top:102px;
+  left:0;
   padding: 40px;
   z-index: 29;
   font-size: 1rem;
@@ -194,10 +195,4 @@ $dtMaroonDark : #a3331d;
       flex-basis: 33%;
   }
 }
-
-@mixin shift ($index) {
-  $indexShift: $index * 13.92775 * 1%;
-  transform: translateX(-$indexShift);
-}
-
 

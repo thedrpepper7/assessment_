@@ -1,11 +1,11 @@
 #mainnav {
     background-color: #333645;
+    position: relative;
 
 }
 
 #navcontainer {
     display: flex;
-    position: relative;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
@@ -117,7 +117,6 @@
     }
     .hovered_itsupp {
         @include appear($itBlueDark);
-        @include shift(1);
     }
 }
 
@@ -141,7 +140,6 @@
     }
     .hovered_dm {
         @include appear($dmGreenDark);
-        @include shift(2);
     }
 }
 
@@ -164,7 +162,6 @@
     }
     .hovered_telecoms {
         @include appear($tcRedDark);
-        @include shift(3);
     }
 }
 
@@ -187,7 +184,6 @@
     }
     .hovered_webdesign {
         @include appear($wdPurpleDark);
-        @include shift(4);
     }
 }
 
@@ -210,7 +206,6 @@
     }
     .hovered_cybersecurity {
         @include appear($csPinkDark);
-        @include shift(5);
     }
 }
 
@@ -222,7 +217,7 @@
 
 //developer course
 .developercourse_square::before {
-    content:'\e921';
+    content:'\f19d';
     color: $dtMaroon;
 }
 
@@ -233,7 +228,6 @@
     }
     .hovered_developercourse {
         @include appear($dtMaroonDark);
-        @include shift(6);
     }
 }
 
@@ -247,3 +241,4 @@
         display: none;
     }
 }
+
