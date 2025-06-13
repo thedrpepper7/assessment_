@@ -18,7 +18,7 @@
 }
 
 .topnavBtns a {
-    height: 56px;
+    height: auto;
 }
 
 //styling for the buttons
@@ -30,6 +30,7 @@
         text-decoration: none;
         color: white;
         font-family: 'icomoon';
+        border-radius: 3px;
     }
     & p {
         padding: 5px 15px;
@@ -68,6 +69,7 @@
     line-height: 1;
     margin-right: 15px;
     color: white;
+    border-radius: 0px 3px 3px 0px;
     background-color:#7e808a;
 }
 
@@ -77,6 +79,99 @@
     line-height: 46px;
     font-size: 2rem;
     color: white;
+    border-radius: 3px;
     background-color:#191a22;
 }
 
+//dark hover buttons
+#supportlink:hover, #contactlink:hover, #magnifyGlass:hover, #burgermenu:hover {
+    filter: brightness(85%);
+}
+
+.mobilesearch {
+    display: none;
+}
+
+@media (max-width:1260px) {
+    #search {
+        display: none;
+    }
+    .topnavBtns {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 992px) {
+  .top-row {
+    justify-content: space-between;
+  }
+
+  .logonetmatters {
+    margin-right: auto;
+  }
+
+  .search {
+    margin-left: auto;
+    justify-content: flex-end;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+
+  #supportlink,
+  #contactlink {
+    display: none;
+  }
+
+  #search {
+    display: flex;
+    flex: 0 1 auto;
+    max-width: 200px;
+  }
+
+  #magnifyGlass,
+  #burgermenu {
+    flex: 0 0 auto;
+  }
+}
+
+
+@media (max-width: 768px) {
+    #search {
+        display: none;
+    }
+    #magnifyGlass::after {
+        content: '\e942';
+        background-color: white;
+        color: black;
+        font-size: 3rem;
+    }
+    .logonetmatters {
+            max-width: 100%;
+            height: auto;
+        }
+    .mobilesearch {
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: space-between;
+        & input {
+            flex: 1;
+            width: 100%;
+            background-color: grey;
+            box-shadow: 0 0 3px #fff;
+            background-color: rgba(0, 0 ,0, .1);
+            border: 2px solid rgba(0,0,0,.1);
+            margin: 10px auto 20px;
+            padding: 10px 10px;
+            justify-content: center;
+        }
+        #mobilemagnifyGlass::after {
+            content: '\e986';
+            font-family: 'icomoon';
+            position: absolute;
+            right: 5%;
+            top:30%;
+        }
+
+    }
+}

@@ -306,6 +306,30 @@ height: auto;
         display: none;
     }
     .serviceLink {
-        bottom:5%;
+        bottom:2%;
+    }
+}
+
+.mobileViewAll {
+    display: none;
+}
+
+@media (max-width:768px) {
+    .servicesL, .servicesS {
+        grid-template-columns: 1fr;
+    }
+    .introservices {
+        display: none;
+    }
+    .mobileViewAll {
+        display: block;
+        & a {
+            text-decoration: none;
+            color:black;
+        }
+        &::after {
+            content: '\ea3c';
+            font-family: 'icomoon';
+        }
     }
 }
