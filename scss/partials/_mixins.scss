@@ -91,6 +91,14 @@ $wdPurple : #926fb1;
 $csPink : #f62459;
 $dtMaroon : #ce4125;
 
+$bGreyDark : #526781;
+$itBlueDark : #286abd;
+$dmGreenDark : #25a25a;
+$tcRedDark : #bc2c28;
+$wdPurpleDark : #79539a;
+$csPinkDark : #de093f;
+$dtMaroonDark : #a3331d;
+
 
 @mixin iconcolor ($iconcolor) {
   color: white;
@@ -119,23 +127,23 @@ $dtMaroon : #ce4125;
 // nav popups 
 
 
-@mixin popup {
-  max-width: 1200px;        
-  @include center;        
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  align-items: start;
-  font-size: 0.78rem;
-  text-align: left;
-  padding: 20px;
-}
+// @mixin popup {
+//   max-width: 1200px;        
+//   @include center;        
+//   display: grid;
+//   grid-template-columns: 1fr 1fr 1fr;
+//   align-items: start;
+//   font-size: 0.78rem;
+//   text-align: left;
+//   padding: 20px;
+// }
 
-@mixin visible {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-  z-index: 999;
-}
+// @mixin visible {
+//   opacity: 1;
+//   visibility: visible;
+//   pointer-events: auto;
+//   z-index: 999;
+// }
 
 @mixin contentsizing {
   margin-left: auto;
@@ -143,3 +151,35 @@ $dtMaroon : #ce4125;
   padding-left: 15px;
   padding-right: 15px;
 }
+
+
+//main nav
+
+@mixin appear ($color) {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: left;
+  background-color: $color;
+  position: absolute;
+  top:102px;
+  padding: 40px;
+  z-index: 29;
+  font-size: 1rem;
+  letter-spacing: .4px;
+  line-height: 1.42857143;
+  color: white;
+  & h1 {
+      flex-basis: 100%;
+      margin-bottom: 40px;
+  }
+  & p {
+      flex-basis: 33%;
+  }
+}
+
+@mixin shift ($index) {
+  $indexShift: $index * 13.92775 * 1%;
+  transform: translateX(-$indexShift);
+}
+
+

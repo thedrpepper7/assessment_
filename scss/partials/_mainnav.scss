@@ -1,263 +1,247 @@
-@import 'effects.scss';
-@use 'mixins';
-
 #mainnav {
     background-color: #333645;
-    position: relative;
-}
 
-#nav_comp, #nav_monitor, #nav_stats, #nav_phone, #nav_web, #nav_shield, #nav_hat {
-    font-size: large;
-    text-align: center;
-    color:white;
-    font-family: 'icomoon';
 }
 
 #navcontainer {
     display: flex;
-    max-height: 99px;
-    @include center;
     position: relative;
-    justify-content:center ;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    height:auto;
+    background-color: #333645;
+    & div {
+        text-align: center;
+        flex-basis: 20%;
+        & a {
+            text-decoration: none;
+            color:white;
+        }
+    }
 }
 
-#navcontainer a {
-    text-decoration:none;
+//width and paddign for tiles
+.navSquare {
+    padding: 10px;
+    max-width: 100%;
 }
 
-.lightpoppins, .heavypoppins {
-    text-align: center;
-    line-height: .75em;
-    font-family: 'Poppins', sans-serif;
-    color:white;
+
+//hidden until relative square hovered
+.hovered_cd, .hovered_itsupp, .hovered_dm, .hovered_telecoms, .hovered_webdesign, .hovered_cybersecurity, .hovered_developercourse {
+    display: none;
+    min-width: 100%;
 }
 
+//setting the font styling for the icomoon first
+.cd_square, .itsupp_square, .dm_square, .telecoms_square, .webdesign_square, .cybersecurity_square, .developercourse_square {
+    font-family: 'icomoon';
+    font-size: 1.438rem;
+    padding-bottom: 10px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1;
+    position: relative;
+}
+
+//text in the tiles
 .lightpoppins {
-    font-size:x-small;
-    font-weight: 500;
+    font-size: .625rem;
+    padding-bottom: 1px;
+    letter-spacing: .4px;
+    margin: 0;
 }
 
 .heavypoppins {
-    font-size: medium;
-    font-weight: 500;
-}
-
-.flexnav {
-    padding:0 40px;
-    height: 110px;
-    line-height: 1;
-    font-size: 1.125rem;
-}
-
-@media (max-width:1200px) {
-    #mainnav {
-        display: none;
-    }
-}
-
-.icomoon {
-    font-family: 'icomoon';
+    font-size: 1rem;
+    padding-bottom: 0;
+    margin: 0;
 }
 
 
-#nav_comp::after {
-    content: "\e957";
-    color: #526781;
-}
-
-#nav_monitor::after {
-    content: "\e956";
-    color: #286abd;
-}
-
-#nav_stats::after {
-    content:  "\e99d";
-    color: #25a25a;
-}
-
-#nav_phone::after {
-    content: "\e942";
-    color: #bc2c28;
-}
-
-#nav_web::after {
-    content: "\ea80";
-    color: #79539a;
-}
-
-#nav_shield::after {
-    content: "\e9b4";
-    color: #de093f;
-}
-
-#nav_hat::after {
-    content: "\e921";
-    color: #a3331d;
-}
-
-.popupheader {
-    grid-column: 1 / -1;
-    font-size: 1.2rem;
-}
-
-.nav_pop_up {
-    @include popup;
-}
-
-
-#nav_background_bespoke, #nav_background_it, #nav_background_marketing, #nav_background_telecoms, #nav_background_web_design, #nav_background_cyber_security, #nav_background_developer_course {
+//the triangles
+.cd_square::after, 
+.itsupp_square::after, 
+.dm_square::after, 
+.telecoms_square::after, 
+.webdesign_square::after, 
+.cybersecurity_square::after, 
+.developercourse_square::after {
+    content: "";
     position: absolute;
-    top: 100%; 
-    left: 0;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 83.665px solid transparent;
+    border-right: 83.665px solid transparent;
+    z-index: 30;
+    border-top: 48px solid transparent; // default hidden
+}
+
+
+// THE TILES
+
+// consultancy & development
+.cd_square::before {
+    content: '\e957';
+    color:$bGrey;
+}
+
+#cd-navTile:hover {
+    background-color: $bGrey;
+    .cd_square::before {
+        color:white;
+    }
+    .hovered_cd {
+        @include appear($bGreyDark);
+    }
+}
+
+//making triangle appear
+#cd-navTile:hover .cd_square::after {
+    border-top-color: $bGrey;
+}
+
+
+// it support 
+.itsupp_square::before {
+    content: '\e956';
+    color: $itBlue;
+}
+
+#itsupp-navTile:hover {
+    background-color: $itBlue;
+    .itsupp_square::before {
+        color:white;
+    }
+    .hovered_itsupp {
+        @include appear($itBlueDark);
+        @include shift(1);
+    }
+}
+
+//making triangle appear
+#itsupp-navTile:hover .itsupp_square::after {
+    border-top-color: $itBlue;
+}
+
+
+
+//digital marketing 
+.dm_square::before {
+    content: '\e99d';
+    color:$dmGreen;
+}
+
+#dm-navTile:hover {
+    background-color: $dmGreen;
+    .dm_square::before {
+        color:white;
+    }
+    .hovered_dm {
+        @include appear($dmGreenDark);
+        @include shift(2);
+    }
+}
+
+//making triangle appear
+#dm-navTile:hover .dm_square::after {
+    border-top-color: $dmGreen;
+}
+
+
+//telecoms services 
+.telecoms_square::before {
+    content: '\e94c';
+    color: $tcRed;
+}
+
+#telecoms-navTile:hover {
+    background-color: $tcRed;
+    .telecoms_square::before {
+        color:white;
+    }
+    .hovered_telecoms {
+        @include appear($tcRedDark);
+        @include shift(3);
+    }
+}
+
+//making triangle appear
+#telecoms-navTile:hover .telecoms_square::after {
+    border-top-color: $tcRed;
+}
+
+
+//web design
+.webdesign_square::before {
+    content: '\ea80';
+    color: $wdPurple;
+}
+
+#webdesign-navTile:hover {
+    background-color: $wdPurple;
+    .webdesign_square::before {
+        color:white;
+    }
+    .hovered_webdesign {
+        @include appear($wdPurpleDark);
+        @include shift(4);
+    }
+}
+
+//making triangle appear
+#webdesign-navTile:hover .webdesign_square::after {
+    border-top-color: $wdPurple;
+}
+
+
+//cyber security 
+.cybersecurity_square::before {
+    content:'\e9b4';
+    color: $csPink;
+}
+
+#cybersecurity-navTile:hover {
+    background-color: $csPink;
+    .cybersecurity_square::before {
+        color:white;
+    }
+    .hovered_cybersecurity {
+        @include appear($csPinkDark);
+        @include shift(5);
+    }
+}
+
+//making triangle appear
+#cybersecurity-navTile:hover .cybersecurity_square::after {
+    border-top-color: $csPink;
+}
+
+
+//developer course
+.developercourse_square::before {
+    content:'\e921';
+    color: $dtMaroon;
+}
+
+#developercourse-navTile:hover {
+    background-color: $dtMaroon;
+    .developercourse_square::before {
+        color:white;
+    }
+    .hovered_developercourse {
+        @include appear($dtMaroonDark);
+        @include shift(6);
+    }
+}
+
+//making triangle appear
+#developercourse-navTile:hover .developercourse_square::after {
+    border-top-color: $dtMaroon;
+}
+
+.fullwidth-bg {
     width: 100%;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    z-index: -1;
-    color:white;
-    
-}
-
-
-#nav_background_bespoke {
-    background-color: #526781;
-}
-
-#nav_background_it {
-    background-color: #286abd;
-}
-
-#nav_background_marketing {
-    background-color: #25a25a;
-}
-
-#nav_background_telecoms {
-    background-color: #bc2c28;
-}
-
-#nav_background_web_design {
-    background-color: #79539a;
-}
-
-#nav_background_cyber_security {
-    background-color: #de093f;
-}
-
-#nav_background_developer_course {
-    background-color: #a3331d
-}
-
-// bespoke
-
-#hover_bespoke:hover {
-    #nav_bespoke {
-        background-color: #526781;
-    }
-    .bespoke_square {
-        background-color: red;
-    }
-
-    #nav_comp::after {
-        color: white;
-    }
-}
-
-#hover_bespoke:hover #nav_background_bespoke {
-   @include visible;
-}
-
-// it support
-
-#hover_support:hover {
-    #nav_itsup {
-        background-color: #286abd;
-    }
-
-    #nav_monitor::after {
-        color:white;
-    }
-}
-
-#hover_support:hover #nav_background_it {
-    @include visible;
-}
-
-// digital marketing
-
-#hover_marketing:hover {
-    #nav_digitalm {
-        background-color: #25a25a;
-    }
-
-    #nav_stats::after {
-        color:white;
-    }
-}
-
-#hover_marketing:hover #nav_background_marketing{
-    @include visible;
-}
-
-// telecoms
-
-#hover_telecoms:hover {
-    #nav_telecoms {
-        background-color: #bc2c28;
-    }
-
-    #nav_phone::after {
-        color:white;
-    }
-}
-
-#hover_telecoms:hover #nav_background_telecoms{
-    @include visible;
-}
-
-// web design
-
-#hover_web_design:hover {
-    #nav_webdesign {
-        background-color: #79539a;
-    }
-
-    #nav_web::after {
-        color:white;
-    }
-}
-
-#hover_web_design:hover #nav_background_web_design{
-    @include visible;
-}
-
-// cyber security
-
-#hover_cyber_security:hover {
-    #nav_cybersecurity {
-        background-color: #de093f;
-    }
-
-    #nav_shield::after {
-        color:white;
-    }
-}
-
-#hover_cyber_security:hover #nav_background_cyber_security{
-    @include visible;
-}
-
-// developer course
-
-#hover_developer_course:hover {
-    #nav_developer {
-        background-color: #a3331d
-    }
-
-    #nav_hat::after {
-        color:white;
-    }
-}
-
-#hover_developer_course:hover #nav_background_developer_course {
-    @include visible;
 }

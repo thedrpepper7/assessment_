@@ -129,13 +129,15 @@ footer {
 @media (min-width : 992px) {
     .footer-row {
         max-width: 100%;
+        flex-wrap: nowrap;
 }
 
     .footer-section-1 {
-        flex-basis: 40%;
+        flex-basis: 20%;
+        margin-right: 80px;
 }
     .row div {
-        flex-basis: 100%;
+        flex-basis: 80%;
     }
 }
 
@@ -178,5 +180,3 @@ footer {
         }
     }
 }
-
-
