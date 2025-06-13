@@ -5,6 +5,24 @@ $g-border: 5px solid green;
 $backgroundgrey: #323544;
 $clienttext: 5px solid red;
 
+
+
+
+// top search bar
+
+@mixin centerBtn {
+  font-family: 'icomoon';
+  color: white;
+  background-color: black;    
+  display: flex;
+  align-items: center;  
+  justify-content: center;
+  width: 57px; 
+  height: 57px;
+
+}
+
+
 /* footer */
 
 @mixin nopadlist {

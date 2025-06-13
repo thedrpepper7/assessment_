@@ -242,6 +242,8 @@
     border-top-color: $dtMaroon;
 }
 
-.fullwidth-bg {
-    width: 100%;
+@media (max-width: 992px) {
+    #mainnav {
+        display: none;
+    }
 }
