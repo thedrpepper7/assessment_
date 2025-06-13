@@ -134,7 +134,7 @@ $dtMaroon : #ce4125;
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-  z-index: 10;
+  z-index: 999;
 }
 
 @mixin contentsizing {

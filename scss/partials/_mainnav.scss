@@ -15,6 +15,7 @@
 
 #navcontainer {
     display: flex;
+    max-height: 99px;
     @include center;
     position: relative;
     justify-content:center ;
@@ -42,8 +43,10 @@
 }
 
 .flexnav {
-    padding: 20px 40px;
-    max-width: 200px;
+    padding:0 40px;
+    height: 110px;
+    line-height: 1;
+    font-size: 1.125rem;
 }
 
 @media (max-width:1200px) {
@@ -112,6 +115,7 @@
     pointer-events: none;
     z-index: -1;
     color:white;
+    
 }
 
 
@@ -148,6 +152,9 @@
 #hover_bespoke:hover {
     #nav_bespoke {
         background-color: #526781;
+    }
+    .bespoke_square {
+        background-color: red;
     }
 
     #nav_comp::after {
