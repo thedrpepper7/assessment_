@@ -78,18 +78,18 @@ body.noScroll {
   overflow: hidden;
 }
 
+
+//mobile menu 
+
+
 .popout-mobile {
   padding: 21px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  & li {
-    justify-content: center;
-    align-items: center;
-  }
-  & p {
-    display: flex;
-    justify-content: center;
+  text-align: center;
+  & a {
+    display: block;
+    padding: 15px;
   }
 }
 
