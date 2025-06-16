@@ -25,7 +25,7 @@ footer {
 }
 
 
-.industries , li , .locations , .services , .about {
+.industries, .locations , .services , .about {
     @include nopadlist;
     @include whitelink;
     color:white;

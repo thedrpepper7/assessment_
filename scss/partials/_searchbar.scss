@@ -83,6 +83,10 @@
     background-color:#191a22;
 }
 
+#burgermenu.burgerToClose::after {
+    content: '\ea21';
+}
+
 //dark hover buttons
 #supportlink:hover, #contactlink:hover, #magnifyGlass:hover, #burgermenu:hover {
     filter: brightness(85%);

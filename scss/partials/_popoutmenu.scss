@@ -1,134 +1,100 @@
-#popoutmenu {
+#mainwrap {
+  z-index: 50;
+  transform: translateX(0);
+  transition: transform 0.3s ease;
+}
+
+//will move the menu with
+#mainwrap.MenuOpen {
+  transform: translateX(-350px);
+}
+
+#popout-menu {
   position: fixed;
+  z-index:200;
   top: 0;
-  right: 0;
-  width: 350px;
-  height: 100vh;        /* full viewport height */
-  overflow-y: auto;     /* enables vertical scroll */
-  background: #333;
-  color: white;
-  display: none;
+  right:0;
+  transform: translateX(350px);
+  transition: transform 0.3s ease;
+  color:white;
   background-color: #333645;
-  padding: 0px;
-  & li {
-    width: 100%;
+  width: 350px;
+  height: 100vh;
+  overflow-y: auto;
+  h1 {
+    margin: 0;
   }
   & ul {
-    padding: 0px;
-    margin: 0px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
   }
-  
-}
-
-
-.servicespopout, .ourworkpopout, .ourknowledgepopout, .trainingpopout, .ourcompanypopout, .contactuspopout, .mobilepopout {
-    
+  & li {
+    font-size: .875rem;
     background-color: rgba(0,0,0,.25);
-    & li {
-        padding: 15px 15px;
-        border-top: 1px solid hsla(0,0%,100%,.05);
-    }
-} 
-
-.popoutheader {
-    padding: 20px 10px;
-    background-color: #333645;
-}
-
-.no-events {
-    pointer-events: none;
-}
-
-
-.mobilepopout {
-  display: none;
-}
-
-@media (max-width: 992px) {
-  .servicespopout, #mobile-services {
-    display: none;
-  }
-  #popoutmenu {
-    max-width: 275px;
-  }
-  .mobilepopout {
-    display: block;
-    text-align: center;
-    background-color: #333645;
-    & li {
-      background-color: rgba(0,0,0,.25);
-      padding: 10px;
-      margin:0px 15px;
-      width:150px;
-      height: 70px;
-      align-items: center;
-    }
-
-    .bespoke-software {
-      margin: 20px 0px;
-    }
-    #mobile-popout-bespoke, 
-    #mobile-popout-it-support, 
-    #mobile-popout-digital-marketing, 
-    #mobile-popout-telecoms-services, 
-    #mobile-popout-web-design,
-    #mobile-popout-cyber-security,
-    #mobile-popout-developer-course{
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      align-content: center;
-      justify-content: center;
-      height: 100px;
-      padding: 10px;
-      margin: 20px 15px;
-      & span {
-        flex-basis: 100%;
-        font-size: 1rem;
-        justify-content: center;
-      }
-      
+    border-top: 1px solid rgba(0,0,0,.45);
+    line-height: 1.5;
+    &::before {
+      font-family: 'icomoon';
+      content: '\ea32';
+      font-size: 0.5rem;
+      padding-right: 10px;
     }
   }
-  #mobile-popout-contact {
-    height: 50px;
-    margin: 20px 15px;
-    font-size: large;
-    
+  & a {
+    text-decoration: none;
+    color:white;
+    border-top: 1px solid hsla(0,0%,100%,.05);
+  }
+
+}
+
+//adding the padding to the desktop list, not the mobile lists
+.popout-services, .popout-ourwork, .popout-ourknowledge, .popout-training, .popout-ourcompany, .popout-contactus {
+  & li {  
+    padding: 15px 20px;
   }
 }
 
-#mobile-popout-bespoke::before {
-  content: '\e957';
+#popout-menu.open {
+  transform: translateX(0);
 }
 
-#mobile-popout-it-support::before {
-  content: '\e956';
+.popout-section-header {
+  padding: 20px;
+  list-style: none;
+  font-size: 1rem;
 }
 
-#mobile-popout-digital-marketing::before {
-  content: '\e99d';
+
+.overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
-#mobile-popout-telecoms-services::before {
-  content: '\e942';
+body.noScroll {
+  overflow: hidden;
 }
 
-#mobile-popout-web-design::before {
-  content: '\ea80';
-}
-
-#mobile-popout-cyber-security::before {
-  content: '\e9b4';
-}
-
-#mobile-popout-developer-course::before {
-  content: '\e921';
-}
-
-.ourworkpopout, .ourknowledgepopout, .trainingpopout, .ourcompanypopout, .contactuspopout {
-  & li::before {
-    font-family: 'icomoon';
-    content: '\ea3c';
+.popout-mobile {
+  padding: 21px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  & li {
+    justify-content: center;
+    align-items: center;
+  }
+  & p {
+    display: flex;
+    justify-content: center;
   }
 }
+
+.mobile-header, #mobile-popout-contact {
+  outline: 1px solid rgba(0,0,0,.25);
+  border: 1px solid hsla(0,0%,100%,.1);
+}
+
