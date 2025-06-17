@@ -142,26 +142,13 @@ $dtMaroonDark : #a3331d;
   border-color: white;
 }
 
-// nav popups 
-
-
-// @mixin popup {
-//   max-width: 1200px;        
-//   @include center;        
-//   display: grid;
-//   grid-template-columns: 1fr 1fr 1fr;
-//   align-items: start;
-//   font-size: 0.78rem;
-//   text-align: left;
-//   padding: 20px;
-// }
-
-// @mixin visible {
-//   opacity: 1;
-//   visibility: visible;
-//   pointer-events: auto;
-//   z-index: 999;
-// }
+@mixin buttons($color) {
+  padding: 10px;
+  color:white;
+  border-radius: 4px;
+  border: $color;
+  background-color: $color;
+}
 
 @mixin contentsizing {
   margin-left: auto;

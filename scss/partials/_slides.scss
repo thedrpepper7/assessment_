@@ -1,166 +1,131 @@
-@import 'effects.scss';
+// swiper-custom.scss
 
-
-//background image
-#imgcover {
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    height: 550px;
-
-    .nivoSlider {
-        width: 100%;
-        height: 100%;
-
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    }
+// Basic Swiper container sizing
+.swiper {
+  width: 100%;
+  height: 550px;
+  position: relative;
 }
 
+// Each slide styling
+.swiper-slide {
+  background: #eee;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 2rem;
+  user-select: none; // prevent accidental text selection on drag
 
-#imgcover::before {
+  img {
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  &::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 25%; // gradient ends here
-    height: 100%;
-    z-index: 1;
-    pointer-events: none;
-    background: linear-gradient(to right,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 0.7) 30%,
-    rgba(0, 0, 0, 0) 100%
-);
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(
+      to right,
+      rgba(0,0,0,0.8) 0%,      // dark on left
+      rgba(0,0,0,0.3) 50%,     // semi-transparent in middle
+      rgba(0,0,0,0) 100%       // transparent on right
+    );
+    pointer-events: none; // allows clicks through overlay
+    z-index: 10;
+  }
 
 }
 
-//space between element above
-#sliderheader {
-    margin-top: 0;
-    padding-top: 50px;
-}
-
-//content ontop of image
-#slider-content {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    color: white;
-    & h1 {
-        font-size: 4rem;
-        line-height: 5rem;
-        z-index: 21;
-    }
-    & p {
-        font-size:1.625rem;
-        line-height: 2.5rem;
-        width: 75%;
-        z-index: 21;
-    }
-    & a {
-        line-height: 50px;
-        padding: 5px 20px;
-        z-index: 21;
-    }
-}
-
-
-//button 
-#fom {
-    display: inline-block;
-    font-family: 'icomoon';
-    text-decoration: none;
-    color: white;
-    background-color: $wdPurple;
-    font-size: 1.25rem;
-    border-radius: 5px;
-}
-
-#fom::after {
-    content: "\ea3c";
-}
-
-#fom:hover {
-    filter: brightness(85%);
-}
-
-
-//dots at bottom
-#imagesliderdots {
+.slide-text {
     position: absolute;
-    bottom: 30px;         
-    left: 50%;             
+    z-index: 20;
+    left: 50%;
     transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-}
-
-.imagedots::after {
-    content: '\e901';
-    font-size: 2rem;
-    font-family: 'icomoon';
-    width: 0;
-    height: 0;
-    position: relative;
-    display: inline-block;
-    // color:hsla(0,0%,100%,.5);
-    color:grey;
-
-}
-
-.selected::after {
-    content: '\ea54';
-    font-size: 2rem;
-    font-family: 'icomoon';
-    width: 0;
-    height: 0;
-    position: relative;
-    display: inline-block;
-    color:grey;
-}
-
-
-@media (max-width: 1260px){
-    #sliderheader , .csfind {
-        margin-top: 0;
-        margin-bottom: 0;
+    bottom: 20%;
+    color:white;
+    white-space: pre-line;
+    & h2 {
+        margin: 10px 0 10px 0;
     }
-
-}
-
-@media (max-width:992px) {
-    #slider-content {
-        display: flex;
-        text-align: center;
-        & h1 {
-            font-size: 2.5rem;
-            line-height: 3rem;
-            font-weight: 600;
-        }
-        & p {
-            width: 100%;
-            font-size: 1.25rem;
-            line-height: 1.75rem;
-            font-weight: 600;
+    & P {
+        margin: 0;
+        font-size: 1.5rem;
+    }
+    button {
+        padding: 15px;
+        &::after {
+            font-family: 'icomoon';
+            content:'\ea3c';
+            padding-left:5px;
         }
     }
-    #sliderdescription {
-        width: 100%;
-        flex-basis: 100%;
+  }
+
+// Pagination dots styling
+.swiper-pagination {
+  position: absolute;
+  bottom: 20px;
+  text-align: center;
+  width: 100%;
+  z-index: 10;
+
+  .swiper-pagination-bullet {
+    background: grey;
+    opacity: 0.6;
+    width: 12px;
+    height: 12px;
+    margin: 0 6px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+    cursor: pointer;
+
+    &.swiper-pagination-bullet-active {
+      background: $wdPurple; // Or your brand color variable
+      opacity: 1;
     }
-    #sliderheader {
-        margin-top: 50px;
-    }
+  }
 }
 
-@media (max-width : 556px) {
-    #sliderheader {
-        margin-top: 10px;
-        padding-top: 10%;
-    }
+.yellow-btn {
+    @include buttons(gold);
+}
+
+.blue-btn {
+  @include buttons($itBlue);
+}
+.purple-btn {
+  @include buttons($wdPurple);
+}
+.pink-btn {
+  @include buttons($csPink);
+}
+.green-btn {
+  @include buttons($dmGreen);
+}
+.red-btn {
+  @include buttons($tcRed);
+}
+
+// Responsive adjustments (optional)
+@media (max-width: 768px) {
+  .swiper {
+    height: 300px;
+  }
+
+  .swiper-slide {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .swiper {
+    height: 250px;
+  }
 }
