@@ -32,7 +32,6 @@
   & li {
     font-size: .875rem;
     background-color: rgba(0,0,0,.25);
-    border-top: 1px solid rgba(0,0,0,.45);
     line-height: 1.5;
   }
   & a {
@@ -93,8 +92,39 @@ body.noScroll {
   }
 }
 
-.mobile-header, #mobile-popout-contact {
+#mobile-header-contact {
   outline: 1px solid rgba(0,0,0,.25);
   border: 1px solid hsla(0,0%,100%,.1);
 }
 
+
+
+.mobile-header {
+  display: flex !important;
+  flex-direction: column;
+  margin-bottom:20px;
+  margin: 30px 0;
+  outline: 1px solid rgba(0,0,0,.25);
+  border: 1px solid hsla(0,0%,100%,.1);
+}
+
+
+
+#popout-menu .popout-mobile li:has(.mobile-header) {
+  background-color: transparent;
+  border-top: none;
+}
+
+.popout-mobile {
+  display: none;
+}
+
+@media (max-width:992px) {
+  .popout-mobile {
+    display: block;
+  }
+
+  #popout-menu {
+    max-width: 275px;
+  }
+}
