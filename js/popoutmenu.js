@@ -12,8 +12,7 @@ popout_menu_btn.addEventListener('click', (event) => {
     popout_menu.classList.add('open');
     popout_menu_btn.classList.add('burgerToClose')
     
-    overlay.style.zIndex = '20';
-    overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.4)';
+    overlay.style.display = 'block';
     body.classList.add('noScroll');
 });
 
@@ -26,7 +25,6 @@ overlay.addEventListener('click', () => {
         popout_menu_btn.classList.remove('burgerToClose');
 
         body.classList.remove('noScroll');
-        overlay.style.zIndex = '-1';
-        overlay.style.backgroundColor = '';
+        overlay.style.display = 'none';
     }
 });

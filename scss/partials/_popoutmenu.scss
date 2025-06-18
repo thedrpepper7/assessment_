@@ -1,5 +1,4 @@
 #mainwrap {
-  z-index: 50;
   transform: translateX(0);
   transition: transform 0.3s ease;
 }
@@ -67,10 +66,14 @@
 
 
 .overlay {
+  display: none;
   position: fixed;
   width: 100vw;
+  z-index: 99;
   height: 100vh;
   overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.4);
+
 }
 
 body.noScroll {
