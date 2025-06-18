@@ -23,6 +23,7 @@
 
   img {
     width: 100%;
+    height: 100%;
     max-height: 550px;
     object-fit: cover;
     display: block;
@@ -49,11 +50,11 @@
     z-index: 20;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 20%;
+    top:7%;
+    max-height: 100%;
     color:white;
-    height: 350px;
     & h2 {
-      width: 75%;  
+      width: 100%;  
       margin: 10px 0 20px 0;
     }
     & P {
@@ -120,35 +121,38 @@
   @include buttons($tcRed);
 }
 
-// Responsive adjustments (optional)
-@media (max-width: 768px) {
-  .swiper {
-    height: 300px;
-  }
-
-  .swiper-slide {
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .swiper {
-    height: 250px;
-  }
-}
 
 
 @media (max-width: 992px) {
   .slide-text {
-    bottom: 15%;
+    top:10%;
     text-align: center;
     & h2 {
       margin-bottom: 0;
-      font-size: 1.2rem;
+      font-size: 2rem;
     }
     & p {
-      font-size: .7rem;
+      width: 100%;
+      font-size: 1rem;
+      text-align: center;
+      letter-spacing: .4px;
+    }
+    & button {
+      margin-top: 0;
+      font-size: 0.75rem;
     }
   }
 
+}
+
+@media (max-width: 768px) {
+  .slide-text {
+    top:5%;
+    & h2 {
+      font-size: 1.2rem;
+    }
+    & p {
+      font-size: 0.75rem;
+    }
+  }
 }
