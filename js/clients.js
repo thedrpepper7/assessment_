@@ -1,6 +1,6 @@
 $(document).ready(function(){
   $('.clients').slick({
-    slidesToShow: 7,
+    slidesToShow: 8,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
