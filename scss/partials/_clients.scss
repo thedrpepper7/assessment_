@@ -11,12 +11,7 @@
     }
 }
 
-.slick-list {
-  overflow-x: hidden;
-  overflow-y: visible;
-}
-
-.ClientsImgWrapper > div {
+.ClientsImgWrapper > div{
   display: none;
   overflow: visible;
 }
@@ -55,7 +50,6 @@
     font-size: 0.7rem;
     padding: 10px 0;
     & a {
-      font-size: 1rem;
       text-decoration: none;
       color:white;
       padding: 10px;

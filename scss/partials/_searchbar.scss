@@ -10,7 +10,6 @@
     }
 }
 
-
 //setting height of stuff inside container
 .logonetmatters {
     height: 64px;
@@ -178,4 +177,18 @@
         }
 
     }
+}
+
+.stickyheader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  transition: transform 0.3s ease;
+  z-index: 9999;
+}
+
+.stickyheader.hidden {
+  transform: translateY(-100%);
 }
