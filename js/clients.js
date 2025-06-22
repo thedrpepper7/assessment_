@@ -1,11 +1,10 @@
-$(document).ready(function(){
-  $('.clients').slick({
-    slidesToShow: 8,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    arrows: false,
-    draggable: false,
-    infinite: true,
-  });
+new Glider(document.querySelector('.glider'), {
+  slidesToScroll: 1,
+  slidesToShow: 5.5,
+  draggable: true,
+  dots: '.dots',
+  arrows: {
+    prev: '.glider-prev',
+    next: '.glider-next'
+  }
 });

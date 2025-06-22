@@ -12,7 +12,8 @@
 }
 
 .slick-list {
-  overflow: none;
+  overflow-x: hidden;
+  overflow-y: visible;
 }
 
 .ClientsImgWrapper > div {
