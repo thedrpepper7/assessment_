@@ -1,6 +1,7 @@
 // Basic Swiper container sizing
 .swiper {
-  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
   max-height: 550px;
   position: relative;
 
@@ -72,31 +73,49 @@
     }
   }
 
+}
+.swiper-pagination {
+  position: absolute;
+  bottom: 20px;
+  text-align: center;
+  width: 100%;
+  z-index: 30;
 
-  .swiper-pagination {
-    position: absolute;
-    bottom: 20px;
-    text-align: center;
-    width: 100%;
-    z-index: 30;
-
-    .swiper-pagination-bullet {
+  .swiper-pagination-bullet {
+    &:hover {
       background: grey;
-      opacity: 0.6;
-      width: 12px;
-      height: 12px;
-      margin: 0 6px;
-      border-radius: 50%;
-      transition: background-color 0.3s ease, opacity 0.3s ease;
-      cursor: pointer;
+    }
+    background: hsla(0,0%,100%,.5);
+    opacity: 0.6;
+    width: 12px;
+    height: 12px;
+    margin: 0 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+    cursor: pointer;
+    position: relative; /* add this */
 
-      &.swiper-pagination-bullet-active {
-        background: $wdPurple; 
-        opacity: 1;
+    &.swiper-pagination-bullet-active {
+      background: #fff;
+      opacity: 1;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 24px;    // bigger circle diameter (adjust as needed)
+        height: 24px;
+        border-radius: 50%;
+        border: 2px solid white; // ring color and thickness
+        pointer-events: none;
+        box-sizing: border-box;
       }
     }
   }
 }
+
 
 
 .yellow-btn { @include buttons(gold); }

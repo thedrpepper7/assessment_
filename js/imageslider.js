@@ -17,20 +17,4 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     grabCursor: true,
   });
-
-  // Second carousel: clients logos
-  const clientsSwiper = new Swiper('.clients-swiper', {
-    slidesPerView: 'auto',
-    spaceBetween: 30,
-    loop: true,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: '.clients-swiper .clients-pagination',
-      clickable: true,
-    },
-    grabCursor: true,
-  });
 });
