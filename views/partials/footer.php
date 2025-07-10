@@ -3,7 +3,7 @@
     <div class="contentwrap">
         <div class="footer-row">
             <div class="footer-menu footer-section-1">
-                <span class="footerlogo"><img src="img/Netmatters/netmatters.webp" id="footrlogo" alt="Netmatters Logo"></span>
+                <span class="footerlogo"><img src="../img/Netmatters/netmatters.webp" id="footrlogo" alt="Netmatters Logo"></span>
                 <p>FOLLOW US ON:</p>
                 <div class="socialmedias">
                     <a href="#" id="fblink"><p class="icomoon" id="facebook"></p></a>

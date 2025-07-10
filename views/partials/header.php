@@ -4,7 +4,7 @@
         <div class="top-row contentwrap">
             <div class="netlogoNav">
             <img
-                src="img/Netmatters/logo-dark.webp"
+                src="../img/Netmatters/logo-dark.webp"
                 alt="Netmatters Logo"
                 class="logonetmatters"
             />
