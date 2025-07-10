@@ -71,3 +71,9 @@
         </div>
     </div>
 </footer>
+<div id="copyright">
+    <p class="contentwrap">
+        © Copyright Netmatters 2025. All rights reserved -
+        <a href="#">Sitemap</a>
+    </p>
+</div>

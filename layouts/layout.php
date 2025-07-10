@@ -13,16 +13,18 @@
     <div class="overlay">
         <div class="mainwrap">
             
-            <?php include 'partials/header.php'; ?>
+            <?php include '../views/partials/header.php'; ?>
 
             <main>
                 <?= $content ?>
             </main>
 
-            <?php include 'partials/footer.php'; ?>
-
+            <?php include '../views/partials/footer.php'; ?>
+            <?php include '../views/partials/popoutmenu.php'?>
+            <?php include '../views/partials/cookiescontact.php'?>
         </div>
     </div>
+    <?php include '../views/partials/scripts.php'?>
 </body>
 </html>
 
