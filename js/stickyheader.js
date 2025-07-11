@@ -1,19 +1,23 @@
-let header = document.querySelector('.stickyheader');
-let lastScroll = window.scrollY;
-const hideAfter = 300;
+document.addEventListener("DOMContentLoaded", function () {
+  const header = document.querySelector(".stickyheader");
+  if (!header) return;
 
-window.addEventListener('scroll', () => {
-  let currentScroll = window.scrollY;
+  let lastScroll = window.scrollY;
+  const hideAfter = 300;
 
-  if (currentScroll <= hideAfter) {
-    header.classList.remove('hidden');
-  } else {
-    if (currentScroll > lastScroll) {
-      header.classList.add('hidden');
+  window.addEventListener("scroll", () => {
+    let currentScroll = window.scrollY;
+
+    if (currentScroll <= hideAfter) {
+      header.classList.remove("hidden");
     } else {
-      header.classList.remove('hidden');
+      if (currentScroll > lastScroll) {
+        header.classList.add("hidden");
+      } else {
+        header.classList.remove("hidden");
+      }
     }
-  }
 
-  lastScroll = currentScroll;
+    lastScroll = currentScroll;
+  });
 });

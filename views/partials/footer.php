@@ -1,4 +1,3 @@
-
 <footer>
     <div class="contentwrap">
         <div class="footer-row">
@@ -12,7 +11,6 @@
                     <a href="#" id="iglink"><p class="icomoon" id="instagram"></p></a>
                 </div>
             </div>
-        
             <div class="row">
                 <div class="footer-menu footer-section-2">
                     <h4>About Netmatters</h4>
@@ -29,7 +27,6 @@
                         <li><a href="#">Terms & Conditions</a></li>
                     </ul>
                 </div>
-
                 <div class="footer-menu footer-section-2">
                     <h4>Our Services</h4>
                     <ul class="services">
@@ -42,8 +39,6 @@
                         <li><a href="#">Developer Training</a></li>
                     </ul>
                 </div>
-
-                    
                 <div class="footer-menu footer-section-2">
                     <h4>Our Industries</h4>
                     <ul class="industries">
@@ -58,7 +53,6 @@
                         <li><a href="#">Manufacturing & Offshore</a></li>
                     </ul>
                 </div>
-
                 <div class="footer-menu footer-section-2">
                     <h4>Locations</h4>
                     <ul class="locations">
@@ -70,10 +64,10 @@
             </div>
         </div>
     </div>
+    <div id="copyright">
+        <p class="contentwrap">
+            © Copyright Netmatters 2025. All rights reserved -
+            <a href="#">Sitemap</a>
+        </p>
+    </div>
 </footer>
-<div id="copyright">
-    <p class="contentwrap">
-        © Copyright Netmatters 2025. All rights reserved -
-        <a href="#">Sitemap</a>
-    </p>
-</div>

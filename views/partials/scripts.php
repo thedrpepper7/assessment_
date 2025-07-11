@@ -5,4 +5,4 @@
 <script src="../js/clients.js"></script>
 <script src="../js/vendor//swiper-bundle.min.js"></script>
 <script src="../js/vendor/slick.min.js"></script>
-<script src="js/stickyheader.js"></script>
+<script src="../js/stickyheader.js"></script> 

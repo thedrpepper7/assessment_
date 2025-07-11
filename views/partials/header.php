@@ -3,17 +3,19 @@
     <nav>
         <div class="top-row contentwrap">
             <div class="netlogoNav">
+            <a href="../controllers/index.php">
             <img
                 src="../img/Netmatters/logo-dark.webp"
                 alt="Netmatters Logo"
                 class="logonetmatters"
             />
+            </a>
             </div>
 
             <div class="search">
             <div class="topnavBtns">
                 <a href="#" id="supportlink"><p>SUPPORT</p></a>
-                <a href="#" id="contactlink"><p>CONTACT</p></a>
+                <a href="../controllers/contact.php" id="contactlink"><p>CONTACT</p></a>
                 <input type="text" id="search" placeholder="Search..." />
                 <span id="magnifyGlass"></span>
                 <span id="burgermenu"></span>
@@ -211,5 +213,6 @@
                 </div>
             </div>
             </div>
+</div>
     </div>
 </div>

@@ -1,107 +1,110 @@
 //the container
 .top-row {
+  display: flex;
+  flex-direction: row;
+  padding: 20px 0;
+  justify-content: space-between;
+  align-items: center;
+  & div {
     display: flex;
-    flex-direction: row;
-    padding: 20px 0;
-    justify-content: space-between;
-    align-items: center;
-    & div {
-        display: flex;
-    }
+  }
 }
 
 //setting height of stuff inside container
 .logonetmatters {
-    height: 64px;
-    width: 370px;
+  height: 64px;
+  width: 370px;
 }
 
 .topnavBtns a {
-    height: auto;
+  height: auto;
 }
 
 //styling for the buttons
 .topnavBtns {
-    & a {
-        display: flex;
-        align-items: center;
-        margin-right: 20px;
-        text-decoration: none;
-        color: white;
-        font-family: 'icomoon';
-        border-radius: 3px;
+  & a {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    text-decoration: none;
+    color: white;
+    font-family: "icomoon";
+    border-radius: 3px;
+  }
+  & p {
+    padding: 5px 15px;
+  }
+  & #supportlink {
+    background-color: #2a6ec6;
+    &::before {
+      content: "\eb07";
     }
-    & p {
-        padding: 5px 15px;
+  }
+  & #contactlink {
+    background-color: #84858f;
+    &::before {
+      content: "\e94f";
     }
-    & #supportlink {
-        background-color: #2a6ec6;
-        &::before {
-            content: '\eb07';
-        }
-    }
-    & #contactlink {
-        background-color: #84858f;
-        &::before {
-            content: '\e94f';    
-        }
-    }
+  }
 
-    #contactlink::before, #supportlink::before {
-        padding-left: 10px;
-        line-height: 45px;
-        font-size: 1.438rem;
-    }
+  #contactlink::before,
+  #supportlink::before {
+    padding-left: 10px;
+    line-height: 45px;
+    font-size: 1.438rem;
+  }
 }
 
-
 .search {
-    display: flex;
-    gap:20px;
-    height: 100%;  
+  display: flex;
+  gap: 20px;
+  height: 100%;
 }
 
 #magnifyGlass::after {
-    content: '\e986';
-    @include centerBtn;
-    font-size: 23px;
-    line-height: 1;
-    margin-right: 15px;
-    color: white;
-    border-radius: 0px 3px 3px 0px;
-    background-color:#7e808a;
+  content: "\e986";
+  @include centerBtn;
+  font-size: 23px;
+  line-height: 1;
+  margin-right: 15px;
+  color: white;
+  border-radius: 0px 3px 3px 0px;
+  background-color: #7e808a;
 }
 
 #burgermenu::after {
-    content: '\e9bd';
-    @include centerBtn;
-    line-height: 46px;
-    font-size: 2rem;
-    color: white;
-    border-radius: 3px;
-    background-color:#191a22;
+  content: "\e9bd";
+  @include centerBtn;
+  line-height: 46px;
+  font-size: 2rem;
+  color: white;
+  border-radius: 3px;
+  background-color: #191a22;
 }
 
 #burgermenu.burgerToClose::after {
-    content: '\ea21';
+  content: "\ea21";
 }
 
 //dark hover buttons
-#supportlink:hover, #contactlink:hover, #magnifyGlass:hover, #burgermenu:hover {
-    filter: brightness(85%);
+#supportlink:hover,
+#contactlink:hover,
+#magnifyGlass:hover,
+#burgermenu:hover {
+  filter: brightness(85%);
 }
 
 .mobilesearch {
-    display: none;
+  display: none;
 }
 
-@media (max-width:1260px) {
-    #search {
-        display: none;
-    }
-    .topnavBtns {
-        max-width: 100%;
-    }
+@media (max-width: 1260px) {
+  #search {
+    display: none;
+  }
+  .topnavBtns {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 992px) {
@@ -137,46 +140,44 @@
   }
 }
 
-
 @media (max-width: 768px) {
-    #search {
-        display: none;
+  #search {
+    display: none;
+  }
+  #magnifyGlass::after {
+    content: "\e942";
+    background-color: white;
+    color: black;
+    font-size: 3rem;
+  }
+  .logonetmatters {
+    max-width: 100%;
+    height: auto;
+  }
+  .mobilesearch {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    & input {
+      flex: 1;
+      width: 100%;
+      background-color: grey;
+      box-shadow: 0 0 3px #fff;
+      background-color: rgba(0, 0, 0, 0.1);
+      border: 2px solid rgba(0, 0, 0, 0.1);
+      margin: 10px auto 20px;
+      padding: 10px 10px;
+      justify-content: center;
     }
-    #magnifyGlass::after {
-        content: '\e942';
-        background-color: white;
-        color: black;
-        font-size: 3rem;
+    #mobilemagnifyGlass::after {
+      content: "\e986";
+      font-family: "icomoon";
+      position: absolute;
+      right: 5%;
+      top: 30%;
     }
-    .logonetmatters {
-            max-width: 100%;
-            height: auto;
-        }
-    .mobilesearch {
-        display: flex;
-        position: relative;
-        align-items: center;
-        justify-content: space-between;
-        & input {
-            flex: 1;
-            width: 100%;
-            background-color: grey;
-            box-shadow: 0 0 3px #fff;
-            background-color: rgba(0, 0 ,0, .1);
-            border: 2px solid rgba(0,0,0,.1);
-            margin: 10px auto 20px;
-            padding: 10px 10px;
-            justify-content: center;
-        }
-        #mobilemagnifyGlass::after {
-            content: '\e986';
-            font-family: 'icomoon';
-            position: absolute;
-            right: 5%;
-            top:30%;
-        }
-
-    }
+  }
 }
 
 .stickyheader {
