@@ -1,4 +1,4 @@
-@import 'effects.scss';
+@import "../universal/mixins";
 
 //latest news and view all styling
 
@@ -7,174 +7,181 @@
   justify-content: space-between;
   margin: 0 auto;
   max-width: 1200px;
-  letter-spacing: .4px;
+  letter-spacing: 0.4px;
   padding: 0 25px;
 }
 
 .viewall {
-    text-decoration: none;
-    color: black;
-    &::after {
-        font-family: 'icomoon';
-        content: '\ea3c';
-    }
+  text-decoration: none;
+  color: black;
+  &::after {
+    font-family: "icomoon";
+    content: "\ea3c";
+  }
 }
 
 //the image cards dimensions
 .newsimage {
-    width: 100%;
-    height: 220px;
+  width: 100%;
+  height: 220px;
 }
 
 //the three cards styling
 .latestnews {
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    justify-content: center;
-    padding-bottom:50px;
-    padding-top:10px;
-    width:100%;
-    justify-content: space-between;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
+  padding-bottom: 50px;
+  padding-top: 10px;
+  width: 100%;
+  justify-content: space-between;
 }
 
-//spacing inside the cards 
-.mnotables, .hiring, .roys{
-    flex-basis: 33%;
-    & h3 {
-        height: 50px;
-    }
+//spacing inside the cards
+.mnotables,
+.hiring,
+.roys {
+  flex-basis: 33%;
+  & h3 {
+    height: 50px;
+  }
 }
 
 //content styling inside
-.newsdescription, .casestudyroy, .notables, .hire {
-    padding: 0 10px;
-    margin-bottom: 30px;
-    height: 100px;
+.newsdescription,
+.casestudyroy,
+.notables,
+.hire {
+  padding: 0 10px;
+  margin-bottom: 30px;
+  height: 100px;
 }
 
-.roys, .mnotables, .hiring {
-    border:1px dotted grey;
-    position: relative;
-    top:0;
-    box-shadow: 0 3px 35px rgba(0,0,0,0.1);
-    @include raise;
-    & a {
-        margin-left: 10px;
-        padding-left: 10px;
-    }
-    
+.roys,
+.mnotables,
+.hiring {
+  border: 1px dotted grey;
+  position: relative;
+  top: 0;
+  box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+  @include raise;
+  & a {
+    margin-left: 10px;
+    padding-left: 10px;
+  }
 }
 
 //probably an easier way to add the dotted line idk
 .seperator {
-    border-bottom: 1px dotted grey;
-    margin-top:50px;
+  border-bottom: 1px dotted grey;
+  margin-top: 50px;
 }
 
 //the "posted by netmatters part"
 .details {
-    margin-top: 20px;
-    align-items: center;
-    display: flex;
-    gap:15px;
-    align-items: center;
-    flex-wrap: wrap;
-    position: absolute;
-    left: 20px;
-    bottom: 5%;
-    white-space: pre-line;
-    max-width: 100%;
-    line-height: 1.375rem;
+  margin-top: 20px;
+  align-items: center;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  flex-wrap: wrap;
+  position: absolute;
+  left: 20px;
+  bottom: 5%;
+  white-space: pre-line;
+  max-width: 100%;
+  line-height: 1.375rem;
 }
 
 #mobileVA {
-    display: none;
+  display: none;
 }
-
 
 //top right tag basic styling
 .NewsTag {
-    position: absolute;
-    top:10px;
-    right: 0;
-    width: 75px;
-    text-align: center;
-    & a {
-        text-decoration: none;
-        color:white;
-        margin: 0
-    } 
+  position: absolute;
+  top: 10px;
+  right: 0;
+  width: 75px;
+  text-align: center;
+  & a {
+    text-decoration: none;
+    color: white;
+    margin: 0;
+  }
 }
 
 //first card tag, text, button
 
 .roys .NewsTag {
-    background-color: #f62459;
+  background-color: #f62459;
 }
 
 .casestudy {
-    @include latestnews(#f62459);
+  @include latestnews(#f62459);
 }
 
 //second card tag, text, button
 
 .mnotables .NewsTag {
-    background-color: #f7b322;
+  background-color: #f7b322;
 }
 
 .team {
-    @include latestnews(#f7b322);
+  @include latestnews(#f7b322);
 }
 
 //third and final card tag, text, button
 
 .hiring .NewsTag {
-    background-color: #4183d7;
+  background-color: #4183d7;
 }
 
 .nettmatterstechnician {
-    @include latestnews(#4183d7);
+  @include latestnews(#4183d7);
 }
-
 
 //breakpoints
 @media (max-width: 1260px) {
-    .hiring {
-        display: none;
-    }
-    .roys, .mnotables {
-        flex-basis: 45%;
-    }
+  .hiring {
+    display: none;
+  }
+  .roys,
+  .mnotables {
+    flex-basis: 45%;
+  }
 }
 
 @media (max-width: 768px) {
-    .viewall {
-        display: none;
+  .viewall {
+    display: none;
+  }
+  .hiring {
+    display: block;
+  }
+  .latestnews {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .roys,
+  .mnotables,
+  .hiring {
+    margin-bottom: 20px;
+  }
+  .newstitle {
+    display: inline-block;
+  }
+  #mobileVA {
+    display: block;
+    text-align: center;
+    & a {
+      text-decoration: none;
+      color: black;
+      &::after {
+        font-family: "icomoon";
+        content: "\ea3c";
+      }
     }
-    .hiring {
-        display: block;
-    }
-    .latestnews {
-        flex-wrap: wrap;
-        flex-direction: column;
-    }
-    .roys, .mnotables, .hiring {
-        margin-bottom: 20px;
-    }
-    .newstitle {
-        display: inline-block;
-    }
-    #mobileVA {
-        display: block;
-        text-align: center;
-        & a {
-            text-decoration: none;
-            color:black;
-            &::after {
-                font-family: 'icomoon';
-                content: '\ea3c';
-            }
-        }
-    }
+  }
 }

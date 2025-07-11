@@ -1,21 +1,19 @@
 // main page
 
-@import "partials/clients";
-@import "partials/latestnews";
-@import "partials/about";
-@import "partials/effects";
-@import "partials/ourservices";
-@import "partials/slides";
-@import "partials/mainnav";
-@import "partials/cookies";
-
-@import "partials/layout";
+@import "partials/home_page/clients";
+@import "partials/home_page/latestnews";
+@import "partials/home_page/about";
+@import "partials/home_page/ourservices";
+@import "partials/home_page/slides";
 
 // contact page
 
-// universal
+@import "partials/contact_page/ouroffices";
 
-@import "partials/stickyheader";
-@import "partials/popoutmenu";
-@import "partials/footer";
-@import "partials/mixins";
+// universal
+@import "partials/universal/stickyheader";
+@import "partials/universal/mainnav";
+@import "partials/universal/popoutmenu";
+@import "partials/universal/footer";
+@import "partials/universal/cookies";
+@import "partials/universal/layout";
