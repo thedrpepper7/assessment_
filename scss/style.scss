@@ -1,15 +1,21 @@
+// main page
 
-@import 'partials/popoutmenu';
-@import 'partials/footer';
-@import 'partials/mixins';
-@import 'partials/clients';
-@import 'partials/latestnews';
-@import 'partials/about';
-@import 'partials/effects';
-@import 'partials/ourservices';
-@import 'partials/slides';
-@import 'partials/mainnav';
-@import 'partials/cookies';
-@import 'partials/searchbar';
-@import 'partials/layout';
+@import "partials/clients";
+@import "partials/latestnews";
+@import "partials/about";
+@import "partials/effects";
+@import "partials/ourservices";
+@import "partials/slides";
+@import "partials/mainnav";
+@import "partials/cookies";
 
+@import "partials/layout";
+
+// contact page
+
+// universal
+
+@import "partials/stickyheader";
+@import "partials/popoutmenu";
+@import "partials/footer";
+@import "partials/mixins";
