@@ -31,6 +31,7 @@
 }
 
 #support_dropdown {
+  user-select: none;
   display: inline-block;
   &::after {
     content: " \f078";
@@ -42,13 +43,14 @@
   }
 }
 
-.dropdown_content.close {
-  display: none;
+.dropdown_content {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.7s ease;
 }
 
 .dropdown_content.open {
-  display: block;
-  transition: 0.4s ease;
+  max-height: 300px;
 }
 
 // form on the left
