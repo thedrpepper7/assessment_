@@ -108,11 +108,11 @@
         <p id="support_dropdown">Out of Hours IT Support</p>
       </div>
       <div class="dropdown_content close">
-        <p>Netmatters IT are offering an Out of Hours service for Emergency and Critical tasks.</p>
-        <p>Monday - Friday 18:00 - 22:00 Saturday</</p>
-        <p>08:00 - 16:00</</p>
-        <p>Sunday 10:00 - 18:00</</p>
-        <p>To log a critical task, you will need to call our main line number and select Option 2 to leave an Out of Hours voicemail. 
+        <p class="out_hours_desc">Netmatters IT are offering an Out of Hours service for Emergency and Critical tasks.</p>
+        <p>Monday - Friday 18:00 - 22:00 Saturday</p>
+        <p>08:00 - 16:00</p>
+        <p>Sunday 10:00 - 18:00</p>
+        <p class="out_hours_desc">To log a critical task, you will need to call our main line number and select Option 2 to leave an Out of Hours voicemail. 
             A technician will contact you on the number provided within 45 minutes of your call.</p>
       </div>
     </div>

@@ -47,10 +47,17 @@
   overflow: hidden;
   max-height: 0;
   transition: max-height 0.7s ease;
+  & p {
+    font-weight: 200;
+  }
 }
 
 .dropdown_content.open {
-  max-height: 300px;
+  max-height: 500px;
+}
+
+.out_hours_desc {
+  font-weight: 300 !important;
 }
 
 // form on the left
@@ -137,7 +144,7 @@
     }
   }
   & p::before {
-    content: "*";
+    content: "* ";
     color: #a94442;
   }
 }
