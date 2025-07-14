@@ -107,7 +107,7 @@
         <p>Monday - Friday 07:00 - 18:00</p>
         <p id="support_dropdown">Out of Hours IT Support</p>
       </div>
-      <div id="dropdown_content">
+      <div class="dropdown_content close">
         <p>hello</p>
         <p>hello</p>
         <p>hello</p>
