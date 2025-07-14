@@ -23,6 +23,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 30px; /* Use gap instead of margin-right */
   margin-top: 50px;
+  margin-bottom: 40px;
 }
 
 // tile images
@@ -32,7 +33,7 @@
   border-radius: 20px 20px 0 0;
   height: auto;
   display: block;
-  object-fit: cover; /* Optional: ensures consistent image coverage */
+  object-fit: cover;
 }
 
 // tiles

@@ -1,0 +1,141 @@
+// whole form
+
+#contact_form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+// info on the right
+
+#contact_information {
+  grid-column: 3 / 4;
+}
+
+#contact_information {
+  & p {
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+  & a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: $wdPurple;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+#support_dropdown {
+  display: inline-block;
+  &::after {
+    content: " \f078";
+    font-family: "icomoon";
+  }
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+
+#dropdown_content {
+  display: none;
+}
+
+#dropdown_content.open {
+  display: block;
+  transition: 0.4s ease;
+}
+
+// form on the left
+
+#form_fillout {
+  background-color: #e6e7e9;
+  border-radius: 5px;
+  grid-column: 1 / 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 30px;
+  gap: 25px;
+}
+
+.form_entry {
+  & label {
+    display: block;
+    font-weight: 600;
+  }
+  & input {
+    width: 100%;
+    padding: 8px 0;
+  }
+  .required::after {
+    content: " *";
+    color: #a94442;
+  }
+}
+
+#contact_message {
+  grid-column: 1 / 3;
+  & textarea {
+    width: 100%;
+    position: relative;
+    min-height: 100px;
+    z-index: 991;
+  }
+}
+
+// checkbox
+
+#marketing_info_box {
+  display: flex;
+  padding: 10px;
+  grid-column: 1 / 3;
+  width: 100%;
+  font-size: 1.1rem;
+  & p {
+    margin: 0;
+    color: #333645;
+  }
+  & a {
+    text-decoration: underline;
+    color: #333645;
+  }
+  & span:hover {
+    cursor: pointer;
+  }
+  & span::before {
+    content: "\ea68";
+    font-family: "icomoon";
+    font-size: 2.2rem;
+    margin-right: 30px;
+  }
+}
+
+// send enquiry button
+
+#send_info {
+  display: flex;
+  padding: 0 10px;
+  grid-column: 1 / 3;
+  justify-content: space-between;
+  & button {
+    color: white;
+    background-color: #333645;
+    border: none;
+    border-radius: 5px;
+    width: 20%;
+    height: 90%;
+    &:hover {
+      cursor: pointer;
+      filter: brightness(80%);
+    }
+  }
+  & p::before {
+    content: "*";
+    color: #a94442;
+  }
+}
