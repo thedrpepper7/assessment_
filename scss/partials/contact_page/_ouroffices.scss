@@ -1,13 +1,90 @@
-#our_offices_image_tiles {
-  display: grid;
-  grid-template-columns: 1fr;
-  background-color: red;
-}
-
-.our_offices {
-  background-color: red;
-}
+// home / ouroffices
 
 .page_location {
-  background-color: red !important;
+  padding: 0;
+  margin: auto;
+  background-color: blue;
+}
+
+// our offices header
+
+.our_offices {
+  & h1 {
+    margin-top: 50px;
+    font-weight: normal;
+    font-size: 2.25rem;
+  }
+}
+
+// tile positioning
+
+#our_offices_image_tiles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px; /* Use gap instead of margin-right */
+  margin-top: 50px;
+}
+
+// tile images
+
+#our_offices_image_tiles img {
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+  height: auto;
+  display: block;
+  object-fit: cover; /* Optional: ensures consistent image coverage */
+}
+
+// tiles
+
+#cambridge_office,
+#wymondham_office,
+#great_yarmouth_office {
+  box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+}
+
+// text inside tiles
+
+#cambridge_office_details,
+#wymondham_office_details,
+#great_yarmouth_office_details {
+  border: 1px solid #ccc;
+  padding: 10px 30px;
+  & > p {
+    white-space: pre-line;
+    color: #666;
+    font-size: 0.9rem;
+  }
+
+  .location_link,
+  .location_number {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .location_link {
+    font-size: 1.2rem;
+    color: black;
+  }
+
+  .location_number {
+    font-size: 1.7rem;
+    color: $wdPurple;
+  }
+}
+
+.test {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 3px;
+  color: white;
+  padding: 15px;
+  width: 50%;
+  background-color: $wdPurple;
+  &:hover {
+    background-color: $wdPurpleDark;
+  }
 }
