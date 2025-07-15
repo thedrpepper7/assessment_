@@ -124,6 +124,10 @@
   }
 }
 
+#checkbox.checked::before {
+  content: "\ea67"; /* Checked icon */
+}
+
 // send enquiry button
 
 #send_info {
