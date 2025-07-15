@@ -272,68 +272,65 @@
     <div class="latestnews contentwrap">
 
         <div class="news1">
-            <img src="../img/LatestNews/roys.png" alt="Roys Of Wroxham" class="newsimage"/>
+            <img src="..<?= $imageLink[0] ?>" alt="Roys Of Wroxham" class="newsimage"/>
             <div class="NewsTag">
-                <a href="#">News</a>
+                <a href="<?= $tagLink[0] ?>">News</a>
             </div>
             <div class="news1header">
                 <h3 class="news1title">
-                    Case Study: Roys of Wroxham - A Future-Proof...
+                    <?= $newsHeader[0] ?>
                 </h3>
                 <p class="newsdescription">
-                    Who Is The Client? Roys of Wroxham is a long-established
-                    independant department store with deep root...
+                    <?= $newsContent[0] ?>
                 </p>
-                <p><a href="#">Read More</a></p>
+                <p><a href="<?= $readmoreLink[0] ?>">Read More</a></p>
                 <div class="seperator"></div>
             </div>
             <div class="details">
                 <img src="../img/Netmatters/netmatters-logo.png" alt="Netmatters Logo"/>
-                <div><strong>Posted by Netmatters</strong> 3rd April 2025</div>
+                <div><strong>Posted by <?= $author[0] ?></strong> <?= $datePosted[0] ?></div>
             </div>
         </div>
     
         <div class="news2">
-            <img src="../img/LatestNews/march-notables-2025-wH2d.png" alt="March Notables" class="newsimage"/>
+            <img src="..<?= $imageLink[1] ?>" alt="March Notables" class="newsimage"/>
             <div class="NewsTag">
-                <a href="#">News</a>
+                <a href="<?= $tagLink[1] ?>">News</a>
             </div>
             <div class="news2header">
                 <h3 class="news2title">
-                    March Notables 2025 - Celebrating Our Team
+                    <?= $newsHeader[1] ?>
                 </h3>
                 <p class="newsdescription">
-                    March Notables 2025 At Netmatters, we take time each month to
-                    celebrate the dedictaion and achieveme...
+                    <?= $newsContent[1] ?>
                 </p>
-                <p><a href="#">Read More</a></p>
+                <p><a href="<?= $readmoreLink[1]?>">Read More</a></p>
                 <div class="seperator"></div>
             </div>
             <div class="details">
                 <img src="../img/Netmatters/netmatters-logo.png" alt="Netmatters Logo"/>
-                <div><strong>Posted by Netmatters</strong> 15th April 2025</div>
+                <div><strong>Posted by <?= $author[1] ?></strong> <?= $datePosted[1] ?></div>
             </div>
         </div>
 
         <div class="news3">
-            <img src="..<?= $imageLink[4] ?>" alt="Technician Hiring" class="newsimage"/>
+            <img src="..<?= $imageLink[2] ?>" alt="Technician Hiring" class="newsimage"/>
             <div class="NewsTag">
-                <a href="#">News</a>
+                <a href="<?= $tagLink[2] ?>">News</a>
             </div>
             <div class="news3header">
                 <h3 class="news3title">
-                    2nd Line Technician
+                    <?= $newsHeader[2] ?>
                 </h3>
-                <p class="newsdescription">
-                Salary Range £28,000 - £36,000 + Pension Hours 40 hours per week,
-                Monday - Friday Location Wymondham...
+                <p class="newsdescription"> 
+                    <?= $newsContent[2] ?>
                 </p>
-                <p><a href="#">Read More</a></p>
+                <p><a href="<?= $readmoreLink[2] ?>">Read More</a></p>
                 <div class="seperator"></div>
             </div>
             <div class="details">
                 <img src="../img/Netmatters/netmatters-logo.png" alt="Netmatters Logo"/>
-                <div><strong>Posted by Nettmatters</strong> 22nd April 2025</div>
+                <div><strong>Posted by <?= $author[2] ?></strong> <?= $datePosted[2] ?></div>
             </div>
         </div>
         <div id="mobileVA"><a href="#">View All</a></div>
