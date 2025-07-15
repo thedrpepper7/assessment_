@@ -316,7 +316,7 @@
         </div>
 
         <div class="news3">
-            <img src="../img/LatestNews/generic-d0fC.png" alt="Technician Hiring" class="newsimage"/>
+            <img src="..<?= $imageLink[4] ?>" alt="Technician Hiring" class="newsimage"/>
             <div class="NewsTag">
                 <a href="#">News</a>
             </div>
@@ -482,4 +482,4 @@
             </div>
             </div>
         </div>
-    </div>
+</div>
