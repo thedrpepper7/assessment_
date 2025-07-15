@@ -5,6 +5,7 @@ TO FIX:
 cookies not working as intended
 stickyheader pops up without being on screen due to overflow at the bottom
 styling to the content on contact page and mobile screen adjustments
+posted by netmatters has weird logo on third
 
 i dont know if i added this - config.php
 
