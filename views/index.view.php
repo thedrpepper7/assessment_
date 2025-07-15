@@ -271,13 +271,13 @@
     
     <div class="latestnews contentwrap">
 
-        <div class="roys">
+        <div class="news1">
             <img src="../img/LatestNews/roys.png" alt="Roys Of Wroxham" class="newsimage"/>
             <div class="NewsTag">
                 <a href="#">News</a>
             </div>
-            <div class="casestudy">
-                <h3 class="casestudyroy">
+            <div class="news1header">
+                <h3 class="news1title">
                     Case Study: Roys of Wroxham - A Future-Proof...
                 </h3>
                 <p class="newsdescription">
@@ -287,58 +287,56 @@
                 <p><a href="#">Read More</a></p>
                 <div class="seperator"></div>
             </div>
-
             <div class="details">
                 <img src="../img/Netmatters/netmatters-logo.png" alt="Netmatters Logo"/>
-                <p><strong>Posted by Netmatters</strong> 3rd April 2025</p>
+                <div><strong>Posted by Netmatters</strong> 3rd April 2025</div>
             </div>
         </div>
     
-        <div class="mnotables">
+        <div class="news2">
             <img src="../img/LatestNews/march-notables-2025-wH2d.png" alt="March Notables" class="newsimage"/>
-        <div class="NewsTag"><a href="#">News</a></div>
-        <div class="team">
-        <h3 class="notables">March Notables 2025 - Celebrating Our Team</h3>
-        <p class="newsdescription">
-            March Notables 2025 At Netmatters, we take time each month to
-            celebrate the dedictaion and achieveme...
-        </p>
-        <p><a href="#">Read More</a></p>
-        <div class="seperator"></div>
+            <div class="NewsTag">
+                <a href="#">News</a>
+            </div>
+            <div class="news2header">
+                <h3 class="news2title">
+                    March Notables 2025 - Celebrating Our Team
+                </h3>
+                <p class="newsdescription">
+                    March Notables 2025 At Netmatters, we take time each month to
+                    celebrate the dedictaion and achieveme...
+                </p>
+                <p><a href="#">Read More</a></p>
+                <div class="seperator"></div>
+            </div>
+            <div class="details">
+                <img src="../img/Netmatters/netmatters-logo.png" alt="Netmatters Logo"/>
+                <div><strong>Posted by Netmatters</strong> 15th April 2025</div>
+            </div>
         </div>
-        <div class="details">
-        <img
-            src="../img/Netmatters/netmatters-logo.png"
-            alt="Netmatters Logo"
-        />
-        <div><strong>Posted by Netmatters</strong> 15th April 2025</div>
+
+        <div class="news3">
+            <img src="../img/LatestNews/generic-d0fC.png" alt="Technician Hiring" class="newsimage"/>
+            <div class="NewsTag">
+                <a href="#">News</a>
+            </div>
+            <div class="news3header">
+                <h3 class="news3title">
+                    2nd Line Technician
+                </h3>
+                <p class="newsdescription">
+                Salary Range £28,000 - £36,000 + Pension Hours 40 hours per week,
+                Monday - Friday Location Wymondham...
+                </p>
+                <p><a href="#">Read More</a></p>
+                <div class="seperator"></div>
+            </div>
+            <div class="details">
+                <img src="../img/Netmatters/netmatters-logo.png" alt="Netmatters Logo"/>
+                <div><strong>Posted by Nettmatters</strong> 22nd April 2025</div>
+            </div>
         </div>
-        </div>
-        <div class="hiring">
-        <img
-        src="../img/LatestNews/generic-d0fC.png"
-        alt="Technician Hiring"
-        class="newsimage"
-        />
-        <div class="NewsTag"><a href="#">News</a></div>
-        <div class="nettmatterstechnician">
-        <h3 class="hire">2nd Line Technician</h3>
-        <p class="newsdescription">
-            Salary Range £28,000 - £36,000 + Pension Hours 40 hours per week,
-            Monday - Friday Location Wymondham...
-        </p>
-        <p><a href="#">Read More</a></p>
-        <div class="seperator"></div>
-        </div>
-        <div class="details">
-        <img
-            src="../img/Netmatters/netmatters-logo.png"
-            alt="Netmatters Logo"
-        />
-        <div><strong>Posted by Nettmatters</strong> 22nd April 2025</div>
-        </div>
-    </div>
-    <div id="mobileVA"><a href="#">View All</a></div>
+        <div id="mobileVA"><a href="#">View All</a></div>
     </div>
 
     <div class="clients-wrapper">

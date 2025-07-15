@@ -39,9 +39,9 @@
 }
 
 //spacing inside the cards
-.mnotables,
-.hiring,
-.roys {
+.news2,
+.news3,
+.news1 {
   flex-basis: 33%;
   & h3 {
     height: 50px;
@@ -50,17 +50,17 @@
 
 //content styling inside
 .newsdescription,
-.casestudyroy,
-.notables,
-.hire {
+.news1title,
+.news2title,
+.news3title {
   padding: 0 10px;
   margin-bottom: 30px;
   height: 100px;
 }
 
-.roys,
-.mnotables,
-.hiring {
+.news1,
+.news2,
+.news3 {
   border: 1px dotted grey;
   position: relative;
   top: 0;
@@ -114,41 +114,41 @@
 
 //first card tag, text, button
 
-.roys .NewsTag {
+.news1 .NewsTag {
   background-color: #f62459;
 }
 
-.casestudy {
+.news1header {
   @include latestnews(#f62459);
 }
 
 //second card tag, text, button
 
-.mnotables .NewsTag {
+.news2 .NewsTag {
   background-color: #f7b322;
 }
 
-.team {
+.news2header {
   @include latestnews(#f7b322);
 }
 
 //third and final card tag, text, button
 
-.hiring .NewsTag {
+.news3 .NewsTag {
   background-color: #4183d7;
 }
 
-.nettmatterstechnician {
+.news3header {
   @include latestnews(#4183d7);
 }
 
 //breakpoints
 @media (max-width: 1260px) {
-  .hiring {
+  .news3 {
     display: none;
   }
-  .roys,
-  .mnotables {
+  .news1,
+  .news2 {
     flex-basis: 45%;
   }
 }
@@ -157,16 +157,16 @@
   .viewall {
     display: none;
   }
-  .hiring {
+  .news3 {
     display: block;
   }
   .latestnews {
     flex-wrap: wrap;
     flex-direction: column;
   }
-  .roys,
-  .mnotables,
-  .hiring {
+  .news1,
+  .news2,
+  .news3 {
     margin-bottom: 20px;
   }
   .newstitle {
