@@ -1,48 +1,41 @@
-const template = `
-<div class="news1">
-    <img src="../img/LatestNews/roys.png" alt="Roys Of Wroxham" class="newsimage"/>
-    <div class="NewsTag">
-        <a href="#">News</a>
-    </div>
-    <div class="news1header">
-        <h3 class="news1title">
-            Case Study: Roys of Wroxham - A Future-Proof...
-        </h3>
-        <p class="newsdescription">
-            Who Is The Client? Roys of Wroxham is a long-established
-            independant department store with deep root...
-        </p>
-        <p><a href="#">Read More</a></p>
-        <div class="seperator"></div>
-    </div>
-    <div class="details">
-        <img src="../img/Netmatters/netmatters-logo.png" alt="Netmatters Logo"/>
-        <div><strong>Posted by Netmatters</strong> 3rd April 2025</div>
-    </div>
-</div>`;
+function dataTransform(tableName) {
+  const amountNewsEntries = tableName.length;
+  const usedIndexes = [];
+  const skeletons = [];
 
-const news1 = document.querySelector(".news1");
-console.log(news1);
+  // Keep picking random numbers until there are 3 unique
+  while (usedIndexes.length < 3) {
+    const randomIndex = Math.floor(Math.random() * amountNewsEntries);
+    if (!usedIndexes.includes(randomIndex)) {
+      usedIndexes.push(randomIndex);
 
-function changeTab(newsSelection) {
-  const skeleton = `
-    <img src="..<?= $imageLink[${newsSelection}] ?>" alt="Technician Hiring" class="newsimage"/>
-    <div class="NewsTag">
-    <a href="<?= $tagLink[${newsSelection}] ?>">News</a>
-    </div>
-    <div class="news3header">
-    <h3 class="news3title">
-    <?= $newsHeader[${newsSelection}] ?>
-    </h3>
-    <p class="newsdescription"> 
-    <?= $newsContent[${newsSelection}] ?>
-    </p>
-    <p><a href="<?= $readmoreLink[${newsSelection}] ?>">Read More</a></p>
-    <div class="seperator"></div>
-    </div>
-    <div class="details">
-    <img src="../img/Netmatters/netmatters-logo.png" alt="Netmatters Logo"/>
-    <div><strong>Posted by <?= $author[${newsSelection}] ?></strong> <?= $datePosted[${newsSelection}] ?></div>
-    </div>
-    `;
+      // Skeleton Html
+      const news = tableName[randomIndex];
+      const skeletonHTML = `
+        <img src="..${news.image_link}" alt="News Image" class="newsimage"/>
+        <div class="NewsTag">
+          <a href="${news.tag_link}">News</a>
+        </div>
+        <div class="news3header">
+          <h3 class="news3title">${news.news_header}</h3>
+          <p class="newsdescription">${news.news_content}</p>
+          <p><a href="${news.read_more_link}">Read More</a></p>
+          <div class="seperator"></div>
+        </div>
+        <div class="details">
+          <img src="../img/Netmatters/netmatters-logo.png" alt="Netmatters Logo"/>
+          <div><strong>Posted by ${news.author}</strong> ${news.date_posted}</div>
+        </div>
+      `;
+      skeletons.push(skeletonHTML);
+    }
+  }
+
+  return skeletons;
 }
+
+const skeletons = dataTransform(newsItems);
+
+document.querySelector(".news1").innerHTML = skeletons[0];
+document.querySelector(".news2").innerHTML = skeletons[1];
+document.querySelector(".news3").innerHTML = skeletons[2];
