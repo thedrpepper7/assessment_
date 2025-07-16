@@ -24,6 +24,25 @@ const template = `
 const news1 = document.querySelector(".news1");
 console.log(news1);
 
-function changeTab(number) {}
-
-const skeleton = ``;
+function changeTab(newsSelection) {
+  const skeleton = `
+    <img src="..<?= $imageLink[${newsSelection}] ?>" alt="Technician Hiring" class="newsimage"/>
+    <div class="NewsTag">
+    <a href="<?= $tagLink[${newsSelection}] ?>">News</a>
+    </div>
+    <div class="news3header">
+    <h3 class="news3title">
+    <?= $newsHeader[${newsSelection}] ?>
+    </h3>
+    <p class="newsdescription"> 
+    <?= $newsContent[${newsSelection}] ?>
+    </p>
+    <p><a href="<?= $readmoreLink[${newsSelection}] ?>">Read More</a></p>
+    <div class="seperator"></div>
+    </div>
+    <div class="details">
+    <img src="../img/Netmatters/netmatters-logo.png" alt="Netmatters Logo"/>
+    <div><strong>Posted by <?= $author[${newsSelection}] ?></strong> <?= $datePosted[${newsSelection}] ?></div>
+    </div>
+    `;
+}

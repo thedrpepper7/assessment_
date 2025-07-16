@@ -26,7 +26,7 @@
         
     </div>
     
-    <?php include '../views/partials/scripts.php'?>
+    <?php include '../views/partials/universalscripts.php'?>
 </body>
 </html>
 

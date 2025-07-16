@@ -35,5 +35,6 @@ include '../views/index.view.php';
 $content = ob_get_clean();
 
 include '../layouts/layout.php';
+include '../views/partials/indexscripts.php';
 
 
