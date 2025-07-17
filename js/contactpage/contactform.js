@@ -3,6 +3,10 @@ function isValidEmail(email) {
   return emailRegex.test(email);
 }
 
+function isOnlyNumbers(number) {
+  return /^[0-9]+$/.test(number);
+}
+
 const inputName = document.querySelector("#name_input");
 const inputCompany = document.querySelector("#company_name_input");
 const inputEmail = document.querySelector("#email_input");
@@ -66,6 +70,9 @@ sendBTN.addEventListener("click", (event) => {
   } else if (telephoneVal.length < 7 || telephoneVal.length > 15) {
     inputTelephone.classList.add("invalidLength");
     isValid = false;
+  } else if (!isOnlyNumbers(telephoneVal)) {
+    inputTelephone.classList.add("invalid");
+    isValid = false;
   } else {
     var inputtedTelephone = telephoneVal;
   }
@@ -86,7 +93,7 @@ sendBTN.addEventListener("click", (event) => {
   }
 
   if (!isValid) {
-    alert(`Please fix the empty fields`);
+    alert(`Please fix the invalid fields`);
     return;
   }
 

@@ -153,6 +153,8 @@
   }
 }
 
-.empty {
+.empty,
+.invalidLength,
+.invalid {
   border: red 1px solid;
 }

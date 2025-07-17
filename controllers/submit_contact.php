@@ -13,14 +13,13 @@ $telephone = trim($data['telephone'] ?? '');
 $message = trim($data['message'] ?? '');
 $marketing = !empty($data['marketing']) ? 1 : 0;  // 1 or 0 for boolean field
 
-// Basic validation (you can extend this)
 if (empty($name) || empty($email) || empty($telephone) || empty($message)) {
     http_response_code(400);
     echo json_encode(['error' => 'Required fields missing']);
     exit;
 }
 
-// Prepare SQL and execute insert
+// Prepare SQL
 $sql = "INSERT INTO contact (full_name, company, email_address, telephone_number, message, receive_information) 
         VALUES (:name, :company, :email, :telephone, :message, :marketing)";
 
