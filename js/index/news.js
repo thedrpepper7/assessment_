@@ -24,7 +24,7 @@ function dataTransform(tableName) {
         </div>
         <div class="details">
           <img src="../img/Netmatters/netmatters-logo.png" alt="Netmatters Logo"/>
-          <div><strong>Posted by ${news.author}</strong> ${news.date_posted}</div>
+          <strong>Posted by ${news.author}</strong> ${news.date_posted}
         </div>
       `;
       skeletons.push(skeletonHTML);
