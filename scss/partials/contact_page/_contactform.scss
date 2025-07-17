@@ -140,7 +140,7 @@
     background-color: #333645;
     border: none;
     border-radius: 5px;
-    width: 20%;
+    width: 30%;
     height: 90%;
     &:hover {
       cursor: pointer;
@@ -167,4 +167,24 @@
 
 .invalid {
   border: red 1px solid;
+}
+
+@media (max-width: 1260px) {
+  #contact_form {
+    grid-template-columns: 1fr 1fr;
+  }
+  #contact_information {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+}
+
+@media (max-width: 991px) {
+  #form_fillout {
+    display: flex;
+    flex-wrap: wrap;
+    & > div {
+      flex-basis: 100%;
+    }
+  }
 }

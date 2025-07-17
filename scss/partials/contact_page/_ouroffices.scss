@@ -90,3 +90,9 @@
     background-color: $wdPurpleDark;
   }
 }
+
+@media (max-width: 991px) {
+  #our_offices_image_tiles {
+    grid-template-columns: 1fr;
+  }
+}
