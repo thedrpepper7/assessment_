@@ -22,11 +22,12 @@
         </main>
 
         <?php include '../views/partials/footer.php'; ?>
-        <?php include '../views/partials/cookiescontact.php'?>
+        
         
     </div>
-    
+    <?php include '../views/partials/cookiescontact.php'?>
     <?php include '../views/partials/universalscripts.php'?>
+    
 </body>
 </html>
 
