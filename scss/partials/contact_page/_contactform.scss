@@ -153,8 +153,18 @@
   }
 }
 
-.empty,
-.invalidLength,
+.invalidNamePopup,
+.invalidCompanyPopup,
+.invalidEmailPopup,
+.invalidTelephonePopup,
+.invalidMessagePopup {
+  display: none;
+  &.visible {
+    display: block;
+    color: red;
+  }
+}
+
 .invalid {
   border: red 1px solid;
 }

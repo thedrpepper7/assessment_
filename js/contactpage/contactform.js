@@ -7,6 +7,23 @@ function isOnlyNumbers(number) {
   return /^[0-9]+$/.test(number);
 }
 
+function showRedBorder(whichBox) {
+  whichBox.classList.add("invalid");
+}
+
+function hideRedBorder(whichBox) {
+  whichBox.classList.remove("invalid");
+}
+
+function showError(errorSpan) {
+  errorSpan.classList.add("visible");
+}
+
+function hideError(errorSpan) {
+  errorSpan.classList.remove("visible");
+}
+
+// the boxes that are checked for validation upon send enquiry being clicked
 const inputName = document.querySelector("#name_input");
 const inputCompany = document.querySelector("#company_name_input");
 const inputEmail = document.querySelector("#email_input");
@@ -14,7 +31,15 @@ const inputTelephone = document.querySelector("#telephone_input");
 const inputMessage = document.querySelector("#message_input");
 const marketingYes = document.querySelector("#checkbox");
 
+// send enquiry button
 const sendBTN = document.querySelector("#send_info button");
+
+// span tags that appear given the validation fails
+const NameError = document.querySelector(".invalidNamePopup");
+const CompanyError = document.querySelector(".invalidCompanyPopup");
+const EmailError = document.querySelector(".invalidEmailPopup");
+const TelephoneError = document.querySelector(".invalidTelephonePopup");
+const MessageError = document.querySelector(".invalidMessagePopup");
 
 sendBTN.addEventListener("click", (event) => {
   event.preventDefault();
@@ -29,61 +54,82 @@ sendBTN.addEventListener("click", (event) => {
 
   // Name Validation
   if (nameVal === "") {
-    inputName.classList.add("empty");
+    showRedBorder(inputName);
+    showError(NameError);
     isValid = false;
   } else if (nameVal.length < 2 || nameVal.length > 50) {
-    inputName.classList.add("invalidLength");
+    showRedBorder(inputName);
+    showError(NameError);
     isValid = false;
   } else {
+    hideRedBorder(inputName);
+    hideError(NameError);
     var inputtedName = nameVal;
   }
 
   let inputtedCompany = "";
   // Company Validation
   if (companyValue !== "") {
-    if (companyValue.length < 2 || companyValue.length > 50) {
-      inputCompany.classList.add("invalidLength");
+    if (companyValue.length < 3 || companyValue.length > 50) {
+      showError(CompanyError);
+      showRedBorder(inputCompany);
       isValid = false;
     } else {
+      hideError(CompanyError);
+      hideRedBorder(inputCompany);
       inputtedCompany = companyValue;
     }
   }
 
   // Email Validation
   if (emailVal === "") {
-    inputEmail.classList.add("empty");
+    showError(EmailError);
+    showRedBorder(inputEmail);
     isValid = false;
   } else if (emailVal.length < 6 || emailVal.length > 255) {
-    inputEmail.classList.add("invalidLength");
+    showError(EmailError);
+    showRedBorder(inputEmail);
     isValid = false;
   } else if (!isValidEmail(emailVal)) {
-    inputEmail.classList.add("invalid");
+    showError(EmailError);
+    showRedBorder(inputEmail);
     isValid = false;
   } else {
+    hideError(EmailError);
+    hideRedBorder(inputEmail);
     var inputtedEmail = emailVal;
   }
 
   // Telephone Validation
   if (telephoneVal === "") {
-    inputTelephone.classList.add("empty");
+    showError(TelephoneError);
+    showRedBorder(inputTelephone);
     isValid = false;
   } else if (telephoneVal.length < 7 || telephoneVal.length > 15) {
-    inputTelephone.classList.add("invalidLength");
+    showError(TelephoneError);
+    showRedBorder(inputTelephone);
     isValid = false;
   } else if (!isOnlyNumbers(telephoneVal)) {
-    inputTelephone.classList.add("invalid");
+    showError(TelephoneError);
+    showRedBorder(inputTelephone);
     isValid = false;
   } else {
+    hideError(TelephoneError);
+    hideRedBorder(inputTelephone);
     var inputtedTelephone = telephoneVal;
   }
 
   if (messageVal === "") {
-    inputMessage.classList.add("empty");
+    showError(MessageError);
+    showRedBorder(inputMessage);
     isValid = false;
-  } else if (messageVal.length < 10 || messageVal.length > 10000) {
-    inputMessage.classList.add("invalidLength");
+  } else if (messageVal.length < 10 || messageVal.length > 1000) {
+    showError(MessageError);
+    showRedBorder(inputMessage);
     isValid = false;
   } else {
+    hideError(MessageError);
+    hideRedBorder(inputMessage);
     var inputtedMessage = messageVal;
   }
 
@@ -111,4 +157,13 @@ sendBTN.addEventListener("click", (event) => {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(contactData),
   });
+
+  // Clear fields right away:
+  alert("Form Submitted");
+  inputName.value = "";
+  inputCompany.value = "";
+  inputEmail.value = "";
+  inputTelephone.value = "";
+  inputMessage.value = "";
+  marketingYes.classList.remove("checked");
 });
