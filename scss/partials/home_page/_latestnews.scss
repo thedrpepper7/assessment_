@@ -8,7 +8,7 @@
   margin: 0 auto;
   max-width: 1200px;
   letter-spacing: 0.4px;
-  padding: 0 25px;
+  padding: 0 25px 0 10px;
 }
 
 .viewall {
@@ -119,7 +119,7 @@
   background-color: #f62459;
 }
 
-.news1header {
+.news1 .newsheader {
   @include latestnews(#f62459);
 }
 
@@ -129,7 +129,7 @@
   background-color: #f7b322;
 }
 
-.news2header {
+.news2 .newsheader {
   @include latestnews(#f7b322);
 }
 
@@ -139,7 +139,7 @@
   background-color: #4183d7;
 }
 
-.news3header {
+.news3 .newsheader {
   @include latestnews(#4183d7);
 }
 

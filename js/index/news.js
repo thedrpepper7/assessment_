@@ -16,8 +16,8 @@ function dataTransform(tableName) {
         <div class="NewsTag">
           <a href="${news.tag_link}">News</a>
         </div>
-        <div class="news3header">
-          <h3 class="news3title">${news.news_header}</h3>
+        <div class="newsheader">
+          <h3 class="newstitle">${news.news_header}</h3>
           <p class="newsdescription">${news.news_content}</p>
           <p><a href="${news.read_more_link}">Read More</a></p>
           <div class="seperator"></div>

@@ -6,7 +6,6 @@
 <script src="../js/index/clients.js"></script>
 <script>
     const newsItems = <?= json_encode($newsItems); ?>;
-    console.log(newsItems);
 </script>
 <script src="../js/index/news.js"></script>
 
