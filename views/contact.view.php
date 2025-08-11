@@ -7,7 +7,7 @@
     <h1>Our Offices</h1>
     <div id="our_offices_image_tiles">
       <div id="cambridge_office">
-        <img src="../img/contactPageLocations/cambridge.jpg" />
+        <img src="img/contactPageLocations/cambridge.jpg" />
         <div id="cambridge_office_details">
           <p><a href="#" class="location_link">Cambridge Office</a></p>
           <p>
@@ -23,7 +23,7 @@
         </div>
       </div>
       <div id="wymondham_office">
-        <img src="../img/contactPageLocations/wymondham.jpg" />
+        <img src="img/contactPageLocations/wymondham.jpg" />
         <div id="wymondham_office_details">
           <p><a href="#" class="location_link">Wymondham Office</a></p>
           <p>
@@ -39,7 +39,7 @@
         </div>
       </div>
       <div id="great_yarmouth_office">
-        <img src="../img/contactPageLocations/yarmouth-2.jpg" />
+        <img src="img/contactPageLocations/yarmouth-2.jpg" />
         <div id="great_yarmouth_office_details">
           <p><a href="#" class="location_link">Great Yarmouth Office</a></p>
           <p>

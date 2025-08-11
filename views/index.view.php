@@ -1,7 +1,7 @@
 <div class="swiper">
     <div class="swiper-wrapper">
         <div class="swiper-slide">
-        <img src="../img/Slides/technology.png" alt="technology company" />
+        <img src="img/Slides/technology.png" alt="technology company" />
         <div class="slide-text contentwrap">
             <h2>The East Of England's Leading Technology Company</h2>
             <p>
@@ -13,7 +13,7 @@
         </div>
 
         <div class="swiper-slide">
-        <img src="../img/Slides/bespoke.jpg" alt="bespoke" />
+        <img src="img/Slides/bespoke.jpg" alt="bespoke" />
         <div class="slide-text contentwrap">
             <h2>Bespoke Software</h2>
             <p>
@@ -25,7 +25,7 @@
         </div>
 
         <div class="swiper-slide">
-        <img src="../img/Slides/it.png" alt="it support" />
+        <img src="img/Slides/it.png" alt="it support" />
         <div class="slide-text contentwrap">
             <h2>IT Support</h2>
             <p>
@@ -37,7 +37,7 @@
 
         <div class="swiper-slide">
         <img
-            src="../img/Slides/digitalmarketing.png"
+            src="img/Slides/digitalmarketing.png"
             alt="digital marketing"
         />
         <div class="slide-text contentwrap">
@@ -51,7 +51,7 @@
         </div>
 
         <div class="swiper-slide">
-        <img src="../img/Slides/telecoms.png" alt="telecoms service" />
+        <img src="img/Slides/telecoms.png" alt="telecoms service" />
         <div class="slide-text contentwrap">
             <h2>Telecoms Service</h2>
             <p>
@@ -63,7 +63,7 @@
         </div>
 
         <div class="swiper-slide">
-        <img src="../img/Slides/webdesign.jpg" alt="web design" />
+        <img src="img/Slides/webdesign.jpg" alt="web design" />
         <div class="slide-text contentwrap">
             <h2>Web Design</h2>
             <p>
@@ -75,7 +75,7 @@
         </div>
 
         <div class="swiper-slide">
-        <img src="../img/Slides/cyber.png" alt="cyber security" />
+        <img src="img/Slides/cyber.png" alt="cyber security" />
         <div class="slide-text contentwrap">
             <h2>Cyber Security</h2>
             <p>
@@ -183,34 +183,34 @@
 
     <div class="clients">
     <img
-        src="../img/FirstRowClients/cyber-essentials-colour.webp"
+        src="img/FirstRowClients/cyber-essentials-colour.webp"
         alt="Cyber Essentials"
     />
-    <img src="../img/FirstRowClients/future-50.webp" alt="Future 50" />
+    <img src="img/FirstRowClients/future-50.webp" alt="Future 50" />
     <img
-        src="../img/FirstRowClients/google-partner.webp"
+        src="img/FirstRowClients/google-partner.webp"
         alt="Google Partner"
     />
     <img
-        src="../img/FirstRowClients/norfolk-carbon-charter.webp"
+        src="img/FirstRowClients/norfolk-carbon-charter.webp"
         alt="Norfolk Carbon Charter"
     />
-    <img src="../img/FirstRowClients/PPC_logo.webp" alt="PPC" />
+    <img src="img/FirstRowClients/PPC_logo.webp" alt="PPC" />
     <img
-        src="../img/FirstRowClients/princess-royal-training.webp"
+        src="img/FirstRowClients/princess-royal-training.webp"
         alt="Princess Royal Training"
     />
     <img
-        src="../img/FirstRowClients/skills-of-tomorrow.jpg"
+        src="img/FirstRowClients/skills-of-tomorrow.jpg"
         alt="Skills of Tomorrow"
     />
     <img
-        src="../img/FirstRowClients/norfolk_prohelp.png"
+        src="img/FirstRowClients/norfolk_prohelp.png"
         alt="Norfolk Prohelp"
     />
-    <img src="../img/FirstRowClients/GBC-colour.png" alt="GBC" />
-    <img src="../img/FirstRowClients/qms.png" alt="QMS" />
-    <img src="../img/FirstRowClients/iso-27001.png" alt="ISO Certification" />
+    <img src="img/FirstRowClients/GBC-colour.png" alt="GBC" />
+    <img src="img/FirstRowClients/qms.png" alt="QMS" />
+    <img src="img/FirstRowClients/iso-27001.png" alt="ISO Certification" />
     </div>
 
     <div class="bckgrnclr">
@@ -272,7 +272,7 @@
     <div class="latestnews contentwrap">
 
         <div class="news1">
-            <img src="..<?= $imageLink[0] ?>" alt="Roys Of Wroxham" class="newsimage"/>
+            <img src="<?= $imageLink[0] ?>" alt="Roys Of Wroxham" class="newsimage"/>
             <div class="NewsTag">
                 <a href="<?= $tagLink[0] ?>">News</a>
             </div>
@@ -287,13 +287,13 @@
                 <div class="seperator"></div>
             </div>
             <div class="details">
-                <img src="../img/Netmatters/netmatters-logo.png" alt="Netmatters Logo"/>
+                <img src="img/Netmatters/netmatters-logo.png" alt="Netmatters Logo"/>
                 <div><strong>Posted by <?= $author[0] ?></strong> <?= $datePosted[0] ?></div>
             </div>
         </div>
     
         <div class="news2">
-            <img src="..<?= $imageLink[1] ?>" alt="March Notables" class="newsimage"/>
+            <img src="<?= $imageLink[1] ?>" alt="March Notables" class="newsimage"/>
             <div class="NewsTag">
                 <a href="<?= $tagLink[1] ?>">News</a>
             </div>
@@ -308,13 +308,13 @@
                 <div class="seperator"></div>
             </div>
             <div class="details">
-                <img src="../img/Netmatters/netmatters-logo.png" alt="Netmatters Logo"/>
+                <img src="img/Netmatters/netmatters-logo.png" alt="Netmatters Logo"/>
                 <div><strong>Posted by <?= $author[1] ?></strong> <?= $datePosted[1] ?></div>
             </div>
         </div>
 
         <div class="news3">
-            <img src="..<?= $imageLink[2] ?>" alt="Technician Hiring" class="newsimage"/>
+            <img src="<?= $imageLink[2] ?>" alt="Technician Hiring" class="newsimage"/>
             <div class="NewsTag">
                 <a href="<?= $tagLink[2] ?>">News</a>
             </div>
@@ -329,7 +329,7 @@
                 <div class="seperator"></div>
             </div>
             <div class="details">
-                <img src="../img/Netmatters/netmatters-logo.png" alt="Netmatters Logo"/>
+                <img src="img/Netmatters/netmatters-logo.png" alt="Netmatters Logo"/>
                 <div><strong>Posted by <?= $author[2] ?></strong> <?= $datePosted[2] ?></div>
             </div>
         </div>
@@ -340,7 +340,7 @@
         <div class="clients">
             <div class="ClientsImgWrapper">
             <img
-                src="../img/SecondRowClients/black_swan_logo.png"
+                src="img/SecondRowClients/black_swan_logo.png"
                 alt="Black Swan"
             />
             <div class="clientsPopup">
@@ -354,13 +354,13 @@
             </div>
             </div>
             <div class="ClientsImgWrapper">
-            <img src="../img/SecondRowClients/xupes_logo.webp" alt="Xupes" />
+            <img src="img/SecondRowClients/xupes_logo.webp" alt="Xupes" />
             <div class="clientsPopup">
                 <h3>Xupes</h3>
             </div>
             </div>
             <div class="ClientsImgWrapper">
-            <img src="../img/SecondRowClients/beat_logo.webp" alt="Beat" />
+            <img src="img/SecondRowClients/beat_logo.webp" alt="Beat" />
             <div class="clientsPopup">
                 <h3>Beat</h3>
                 <p>The UK's eating disorder charity founded in 1989</p>
@@ -368,7 +368,7 @@
             </div>
             <div class="ClientsImgWrapper">
             <img
-                src="../img/SecondRowClients/survey_solutions_logo.webp"
+                src="img/SecondRowClients/survey_solutions_logo.webp"
                 alt="Survey Solution"
             />
             <div class="clientsPopup">
@@ -377,7 +377,7 @@
             </div>
             <div class="ClientsImgWrapper">
             <img
-                src="../img/SecondRowClients/girl_guides_anglia.webp"
+                src="img/SecondRowClients/girl_guides_anglia.webp"
                 alt="Girl Guides Anglia"
             />
             <div class="clientsPopup">
@@ -390,7 +390,7 @@
             </div>
             </div>
             <div class="ClientsImgWrapper">
-            <img src="../img/SecondRowClients/sweetzy_logo.webp" alt="Sweetzy" />
+            <img src="img/SecondRowClients/sweetzy_logo.webp" alt="Sweetzy" />
             <div class="clientsPopup">
                 <h3>Sweetzy</h3>
                 <p>Sweetzy are an online sweets retailer, based in Wymondham</p>
@@ -399,7 +399,7 @@
             </div>
             <div class="ClientsImgWrapper">
             <img
-                src="../img/SecondRowClients/howespercivallogo.webp"
+                src="img/SecondRowClients/howespercivallogo.webp"
                 alt="Howes Percival"
             />
             <div class="clientsPopup">
@@ -408,7 +408,7 @@
             </div>
             <div class="ClientsImgWrapper">
             <img
-                src="../img/SecondRowClients/girls_day_school_trust_logob.png"
+                src="img/SecondRowClients/girls_day_school_trust_logob.png"
                 alt="Girls Day School Trust"
             />
             <div class="clientsPopup">
@@ -422,7 +422,7 @@
             </div>
             <div class="ClientsImgWrapper">
             <img
-                src="../img/SecondRowClients/ashcroftlogo_landscape_goldblack_DP60P-small.png"
+                src="img/SecondRowClients/ashcroftlogo_landscape_goldblack_DP60P-small.png"
                 alt="Ashcroft"
             />
             <div class="clientsPopup">
@@ -438,7 +438,7 @@
             </div>
             <div class="ClientsImgWrapper">
             <img
-                src="../img/SecondRowClients/onetravellerlogo_white_figuire.png"
+                src="img/SecondRowClients/onetravellerlogo_white_figuire.png"
                 alt="One traveller"
             />
             <div class="clientsPopup">
@@ -451,7 +451,7 @@
             </div>
             </div>
             <div class="ClientsImgWrapper">
-            <img src="../img/SecondRowClients/searles_logo.jpg" alt="Searles" />
+            <img src="img/SecondRowClients/searles_logo.jpg" alt="Searles" />
             <div class="clientsPopup">
                 <h3>Searles Leisure Resort</h3>
                 <p>
@@ -462,14 +462,14 @@
             </div>
             </div>
             <div class="ClientsImgWrapper">
-            <img src="../img/SecondRowClients/busseys_logo.png" alt="Busseys" />
+            <img src="img/SecondRowClients/busseys_logo.png" alt="Busseys" />
             <div class="clientsPopup">
                 <h3>Busseys</h3>
                 <p>One of the UK's leading ford dealerships.</p>
             </div>
             </div>
             <div class="ClientsImgWrapper">
-            <img src="../img/SecondRowClients/crane_logo.png" alt="Crane" />
+            <img src="img/SecondRowClients/crane_logo.png" alt="Crane" />
             <div class="clientsPopup">
                 <h3>Busseys</h3>
                 <p>

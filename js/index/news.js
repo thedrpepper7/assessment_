@@ -12,7 +12,7 @@ function dataTransform(tableName) {
       // Skeleton Html
       const news = tableName[randomIndex];
       const skeletonHTML = `
-        <img src="..${news.image_link}" alt="News Image" class="newsimage"/>
+        <img src="${news.image_link}" alt="News Image" class="newsimage"/>
         <div class="NewsTag">
           <a href="${news.tag_link}">News</a>
         </div>
@@ -23,7 +23,7 @@ function dataTransform(tableName) {
           <div class="seperator"></div>
         </div>
         <div class="details">
-          <img src="../img/Netmatters/netmatters-logo.png" alt="Netmatters Logo"/>
+          <img src="img/Netmatters/netmatters-logo.png" alt="Netmatters Logo"/>
           <strong>Posted by ${news.author}</strong> ${news.date_posted}
         </div>
       `;
