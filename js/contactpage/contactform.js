@@ -152,7 +152,7 @@ sendBTN.addEventListener("click", (event) => {
     marketing: marketing,
   };
 
-  fetch("submit_contact.php", {
+  fetch("controllers/submit_contact.php", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(contactData),
