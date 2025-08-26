@@ -56,33 +56,33 @@
       </div>
     </div>
   </div>
-  <form action="submit_contact.php" method="POST" id="contactForm">
+  <form action="/websites/assessment_/contact.php" method="POST" id="contactForm">
     <div id="contact_form">
       <div id="form_fillout">
         <div id="contact_name" class="form_entry">
           <label for="name_input" class="required">Your Name</label>
-          <input type="text" id="name_input" name="name"/>
-          <span class="invalidNamePopup">Ensure you enter a name between 2 and 50 characters long *</span>
+          <input type="text" id="name_input" name="name" class="<?= $nameBorder ?>" value="<?= $old['name'] ?>"/>
+          <span class="invalidNamePopup <?= $invalidName ?>">Ensure you enter a name between 2 and 50 characters long *</span>
         </div>
         <div id="contact_company" class="form_entry">
           <label for="company_name_input">Company Name</label>
-          <input type="text" id="company_name_input" name="company" />
-          <span class="invalidCompanyPopup">Ensure if you do provide a company name, it is between 2 and 50 characters long *</span>
+          <input type="text" id="company_name_input" name="company" class="<?= $companyBorder ?>" value="<?= $old['company'] ?>"/>
+          <span class="invalidCompanyPopup <?= $invalidCompany ?>">Ensure if you do provide a company name, it is between 2 and 50 characters long *</span>
         </div>
         <div id="contact_email" class="form_entry">
           <label for="email_input" class="required">Your Email</label>
-          <input type="text" id="email_input" name="email"/>
-          <span class="invalidEmailPopup">Ensure you enter a valid Email address *</span>
+          <input type="text" id="email_input" name="email" class="<?= $emailBorder ?>" value="<?= $old['email'] ?>"/>
+          <span class="invalidEmailPopup <?= $invalidEmail ?> ">Ensure you enter a valid Email address *</span>
         </div>
         <div id="contact_telephone" class="form_entry">
           <label for="telephone_input" class="required">Your Telephone Number</label>
-          <input type="text" id="telephone_input" name="telephone"/>
-          <span class="invalidTelephonePopup">Ensure you enter a valid telephone number using only digits (7-15 numbers long) *</span>
+          <input type="text" id="telephone_input" name="telephone" class="<?= $telephoneBorder ?>" value="<?= $old['telephone'] ?>"/>
+          <span class="invalidTelephonePopup <?= $invalidTelephone ?> ">Ensure you enter a valid telephone number using only digits (7-15 numbers long) *</span>
         </div>
         <div id="contact_message" class="form_entry">
           <label for="message_input" class="required">Message</label>
-          <textarea id="message_input" name="message"></textarea>
-          <span class="invalidMessagePopup">Your message must be between 1 and 1000 characters *</span>
+          <textarea id="message_input" name="message" class="<?= $messageBorder ?>" value="<?= $old['message'] ?>"></textarea>
+          <span class="invalidMessagePopup <?= $invalidMessage ?>">Your message must be between 1 and 1000 characters *</span>
         </div>
         <div id="marketing_info_box">
           <span id="checkbox"></span>
@@ -93,7 +93,7 @@
           </p>
         </div>
         <div id="send_info">
-          <button>SEND ENQUIRY</button>
+          <button type="submit">SEND ENQUIRY</button>
           <p>Fields Required</p>
         </div>
       </div>

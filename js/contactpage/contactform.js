@@ -134,36 +134,35 @@ sendBTN.addEventListener("click", (event) => {
   }
 
   // Checking if box is ticked
-  if (marketingYes.classList.contains("checked")) {
-    marketing = true;
-  }
+  // if (marketingYes.classList.contains("checked")) {
+  //   marketing = true;
+  // }
 
-  if (!isValid) {
-    alert(`Please fix the invalid fields`);
-    return;
-  }
+  // if (!isValid) {
+  //   return;
+  // }
 
-  contactData = {
-    name: inputtedName,
-    company: inputtedCompany,
-    email: inputtedEmail,
-    telephone: inputtedTelephone,
-    message: inputtedMessage,
-    marketing: marketing,
-  };
+  // contactData = {
+  //   name: inputtedName,
+  //   company: inputtedCompany,
+  //   email: inputtedEmail,
+  //   telephone: inputtedTelephone,
+  //   message: inputtedMessage,
+  //   marketing: marketing,
+  // };
 
-  fetch("controllers/submit_contact.php", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(contactData),
-  });
+  // fetch("controllers/submit_contact.php", {
+  //   method: "POST",
+  //   headers: { "Content-Type": "application/json" },
+  //   body: JSON.stringify(contactData),
+  // });
 
-  // Clear fields right away:
-  alert("Form Submitted");
-  inputName.value = "";
-  inputCompany.value = "";
-  inputEmail.value = "";
-  inputTelephone.value = "";
-  inputMessage.value = "";
-  marketingYes.classList.remove("checked");
+  // // Clear fields right away:
+  // alert("Form Submitted");
+  // inputName.value = "";
+  // inputCompany.value = "";
+  // inputEmail.value = "";
+  // inputTelephone.value = "";
+  // inputMessage.value = "";
+  // marketingYes.classList.remove("checked");
 });
