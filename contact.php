@@ -70,28 +70,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         hideErrorArea($nameBorder, $invalidName);
     }
 
-    if ($company === '') {
-        showErrorArea($companyBorder, $invalidCompany);  
-        $errors['company'] = 'Company';
-    } else {
-        hideErrorArea($companyBorder, $invalidCompany);
-    }
+    if ($company != '') {
+        if (strlen($company) < 2 || strlen($company) > 50 ) {
+            showErrorArea($companyBorder, $invalidCompany);  
+            $errors['company'] = 'Company';
+        } else {
+            hideErrorArea($companyBorder, $invalidCompany);
+        }
+    } 
 
-    if ($email === '') {
+    if ($email === '' || !validEmail($email)) {
         showErrorArea($emailBorder, $invalidEmail); 
         $errors['email'] = 'Email';
     } else {
         hideErrorArea($emailBorder, $invalidEmail);
     }
 
-    if ($telephone === '') { 
+    if ($telephone === '' || !validTelephone($telephone)) { 
         showErrorArea($telephoneBorder, $invalidTelephone); 
         $errors['telephone'] = 'Telephone';
     } else {
         hideErrorArea($telephoneBorder, $invalidTelephone);
     }
 
-    if ($message === '') { 
+    if ($message === '' || strlen($message) < 20 || strlen($message) > 1000) { 
         showErrorArea($messageBorder, $invalidMessage); 
         $errors['message'] = 'Message';
     } else {
@@ -113,8 +115,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 ':marketing' => $marketing
             ]);
             
-            
-           
 
             $success = "Message submitted successfully!";
             $old = [];
@@ -125,11 +125,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-
-
-    
-
-
 ob_start();
 include 'views/contact.view.php';
 $content = ob_get_clean();
@@ -138,5 +133,3 @@ include 'layouts/layout.php';
 include 'views/partials/contactscripts.php';
 
 
-// $sql = "INSERT INTO contact (full_name, company, email_address, telephone_number, message, receive_information)
-//                     VALUES (:name, :company, :email, :telephone, :message, :marketing)";

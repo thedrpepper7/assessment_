@@ -41,16 +41,17 @@ const EmailError = document.querySelector(".invalidEmailPopup");
 const TelephoneError = document.querySelector(".invalidTelephonePopup");
 const MessageError = document.querySelector(".invalidMessagePopup");
 
+const form = document.getElementById("contactForm");
+
 sendBTN.addEventListener("click", (event) => {
   event.preventDefault();
-
   let isValid = true;
+
   let nameVal = inputName.value.trim();
   let companyValue = inputCompany.value.trim();
   let emailVal = inputEmail.value.trim();
   let telephoneVal = inputTelephone.value.trim();
   let messageVal = inputMessage.value.trim();
-  var marketing = false;
 
   // Name Validation
   if (nameVal === "") {
@@ -64,10 +65,8 @@ sendBTN.addEventListener("click", (event) => {
   } else {
     hideRedBorder(inputName);
     hideError(NameError);
-    var inputtedName = nameVal;
   }
 
-  let inputtedCompany = "";
   // Company Validation
   if (companyValue !== "") {
     if (companyValue.length < 3 || companyValue.length > 50) {
@@ -77,7 +76,6 @@ sendBTN.addEventListener("click", (event) => {
     } else {
       hideError(CompanyError);
       hideRedBorder(inputCompany);
-      inputtedCompany = companyValue;
     }
   }
 
@@ -97,7 +95,6 @@ sendBTN.addEventListener("click", (event) => {
   } else {
     hideError(EmailError);
     hideRedBorder(inputEmail);
-    var inputtedEmail = emailVal;
   }
 
   // Telephone Validation
@@ -116,7 +113,6 @@ sendBTN.addEventListener("click", (event) => {
   } else {
     hideError(TelephoneError);
     hideRedBorder(inputTelephone);
-    var inputtedTelephone = telephoneVal;
   }
 
   if (messageVal === "") {
@@ -130,39 +126,9 @@ sendBTN.addEventListener("click", (event) => {
   } else {
     hideError(MessageError);
     hideRedBorder(inputMessage);
-    var inputtedMessage = messageVal;
   }
 
-  // Checking if box is ticked
-  // if (marketingYes.classList.contains("checked")) {
-  //   marketing = true;
-  // }
-
-  // if (!isValid) {
-  //   return;
-  // }
-
-  // contactData = {
-  //   name: inputtedName,
-  //   company: inputtedCompany,
-  //   email: inputtedEmail,
-  //   telephone: inputtedTelephone,
-  //   message: inputtedMessage,
-  //   marketing: marketing,
-  // };
-
-  // fetch("controllers/submit_contact.php", {
-  //   method: "POST",
-  //   headers: { "Content-Type": "application/json" },
-  //   body: JSON.stringify(contactData),
-  // });
-
-  // // Clear fields right away:
-  // alert("Form Submitted");
-  // inputName.value = "";
-  // inputCompany.value = "";
-  // inputEmail.value = "";
-  // inputTelephone.value = "";
-  // inputMessage.value = "";
-  // marketingYes.classList.remove("checked");
+  if (isValid) {
+    form.submit();
+  }
 });
