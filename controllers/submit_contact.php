@@ -11,7 +11,7 @@ $company = trim($data['company'] ?? '');
 $email = trim($data['email'] ?? '');
 $telephone = trim($data['telephone'] ?? '');
 $message = trim($data['message'] ?? '');
-$marketing = !empty($data['marketing']) ? 1 : 0;  // 1 or 0 for boolean field
+$marketing = !empty($data['marketing']) ? 1 : 0;  
 
 if (empty($name) || empty($email) || empty($telephone) || empty($message)) {
     http_response_code(400);

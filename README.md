@@ -1,5 +1,5 @@
 # assessment\_
 
-TO FIX:
+// Database connection setup
 
-stickyheader pops up without being on screen due to overflow at the bottom
+To setup, copy .env.example to .env and replace all placeholder variables with real database credentials and run.
