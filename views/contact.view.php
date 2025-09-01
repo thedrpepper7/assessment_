@@ -84,14 +84,15 @@
           <textarea id="message_input" name="message" class="<?= $messageBorder ?>"><?= $old['message'] ?? '' ?></textarea>
           <span class="invalidMessagePopup <?= $invalidMessage ?>">Your message must be between 1 and 1000 characters *</span>
         </div>
-        <div id="marketing_info_box">
-          <input type="checkbox" name="marketing"></input>
+        <label id="marketing_info_box" for="marketingCheckbox">
+          <input type="checkbox" name="marketing" id="marketingCheckbox">
+          <span class="customCheckbox"></span>
           <p>
             Please tick this box if you wish to receive marketing information from
             us. Please see our <a href="#">Privacy Policy</a> for more information
             on how we keep your data safe.
           </p>
-        </div>
+        </label>
         <div id="send_info">
           <button type="submit">SEND ENQUIRY</button>
           <p>Fields Required</p>

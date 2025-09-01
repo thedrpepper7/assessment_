@@ -34,6 +34,14 @@
   & p {
     padding: 5px 15px;
   }
+
+  & #supportlink,
+  & #contactlink {
+    & p {
+      margin-top: 9px;
+      margin-bottom: 9px;
+    }
+  }
   & #supportlink {
     background-color: #2a6ec6;
     &::before {
@@ -52,6 +60,15 @@
     padding-left: 10px;
     line-height: 45px;
     font-size: 1.438rem;
+  }
+}
+
+#search {
+  &:focus {
+    border-color: #5bc0de;
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+      0 0 8px rgba(91, 192, 222, 0.6);
   }
 }
 
@@ -76,6 +93,7 @@
   content: "\e9bd";
   @include centerBtn;
   line-height: 46px;
+  width: 60px !important;
   font-size: 2rem;
   color: white;
   border-radius: 3px;
@@ -105,6 +123,10 @@
   .topnavBtns {
     max-width: 100%;
   }
+
+  #magnifyGlass::after {
+    border-radius: 3px;
+  }
 }
 
 @media (max-width: 992px) {
@@ -129,7 +151,7 @@
   }
 
   #search {
-    display: flex;
+    display: inline-block;
     flex: 0 1 auto;
     max-width: 200px;
   }
@@ -138,9 +160,13 @@
   #burgermenu {
     flex: 0 0 auto;
   }
+
+  #magnifyGlass::after {
+    border-radius: 0px 3px 3px 0px;
+  }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   #search {
     display: none;
   }

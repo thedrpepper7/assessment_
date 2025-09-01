@@ -116,16 +116,26 @@
   & span:hover {
     cursor: pointer;
   }
-  & span::before {
-    content: "\ea68";
-    font-family: "icomoon";
-    font-size: 2.2rem;
-    margin-right: 30px;
-  }
 }
 
-#checkbox.checked::before {
-  content: "\ea67"; /* Checked icon */
+#marketing_info_box span::before {
+  content: "\ea68"; // empty box
+  font-family: "icomoon";
+  font-size: 2.2rem;
+  margin-right: 30px;
+  display: inline-block;
+  vertical-align: middle;
+  transition: all 0.2s ease;
+}
+
+#marketing_info_box span.checked::before {
+  content: "\ea67"; // checked symbol
+  color: black;
+}
+
+// the default checkbox being hidden
+#marketingCheckbox {
+  display: none;
 }
 
 // send enquiry button
